@@ -1,0 +1,70 @@
+@use "../_parts/variables" as *;
+main {
+    background-color: $bg_color;
+    .main_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        height: calc(100% - #{$header_height});
+        @media (min-width: $desktop_breakpoint) {
+            height: calc(100% - #{$header_height});
+        }
+        h2,
+        p,
+        div {
+            font-family: "Quicksand";
+            width: vw(314, 420);
+            font-size: 16px;
+            color: $text_color;
+            padding: 10px 0 10px 0;
+            text-align: justify;
+        }
+    }
+    .first_page {
+        // width: 100%;
+        height: calc(100vh - #{$header_height});
+        @media (min-width: $desktop_breakpoint) {
+            height: calc(100vh - #{$header_height});
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .second_page {
+        width: 100%;
+        height: calc(100vh - #{$header_height});
+        @media (min-width: $desktop_breakpoint) {
+            height: calc(100vh - #{$header_height});
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .description {
+            max-width: vw(317, 420);
+            width: 100%;
+        }
+        .tech {
+            max-width: vw(317, 420);
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .daily {
+                text-align: left;
+            }
+            .additional {
+                text-align: center;
+            }
+            .tools {
+                text-align: right;
+            }
+            ul {
+                list-style: none;
+            }
+        }
+    }
+}

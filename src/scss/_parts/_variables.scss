@@ -1,0 +1,33 @@
+$desktop_breakpoint: 1000px;
+
+
+$bg_color: #004643;
+$header_color: rgba(0, 70, 67, .8);
+
+$text_color: #fff;
+
+$header_height: 90px;
+
+$footer_height: 134px;
+$d_footer_height: 50px;
+$footer_color: #F9BC60;
+
+$menu_color: #E8E4E6;
+
+$header_padding: 53px;
+
+$open_menu_width: 293px;
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-SemiBold.otf');
+}
+
+@function vw($w, $h) {
+    $vw: calc($w / ($h / 100vw)); 
+    @return $vw;
+}

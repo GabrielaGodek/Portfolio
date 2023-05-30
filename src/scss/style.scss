@@ -1,0 +1,18 @@
+@use '../../node_modules/normalize-scss/sass/normalize';
+
+
+@use '_parts/variables';
+@use "_parts/header";
+@use "_parts/footer";
+
+@use "_pages/welcome";
+@use "_pages/experience";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    height: 100vh;
+}

@@ -1,0 +1,64 @@
+@use '_variables' as *;
+
+footer {
+    max-height: $footer_height;
+    height: 100%;
+    background-color: $footer_color;
+    position: relative;
+    @media (min-width: $desktop_breakpoint) {
+        max-height: $d_footer_height;
+    }
+    .avatar {
+        // height: 100%;
+        // width: 100%;
+       //  position: relative;
+       position: absolute;
+       top: 0;
+       right: 50%;
+       width: 50px;
+       height: 50px;
+       transform: translate(50%, -50%);
+        img {
+            width: 100%;
+       };
+    }
+   .wrapper {
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    //  width: 100%;
+     padding: 0 $header_padding 0 $header_padding;
+    //  position: relative;
+     .contact_icon {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         height: 100%;
+         @media (min-width: $desktop_breakpoint) {
+            & {
+                flex-direction: row;
+                align-items: center;
+                max-width: 268px;
+                width: 100%;
+            }
+        }
+     }
+     
+     .signature {
+        font-size: 19px;
+        text-align: right;
+        font-family: 'Quicksand-semiBold';
+        .d_hide {
+            display: block;
+            max-height: 0;
+            @media (min-width: $desktop_breakpoint) {
+                & {
+                    display: none;
+                }
+            }
+        }
+        
+     }
+   }
+}
