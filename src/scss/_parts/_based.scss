@@ -1,0 +1,29 @@
+@use 'variables' as *;
+section {
+    min-height: 100vh;
+    width: vw(314, 420);
+}
+main {
+    background-color: $bg_color;
+    height: auto;
+}
+body, body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    height: 100vh;
+    padding: 0;
+}
+
+h2,
+p,
+div {
+    font-family: "Quicksand";
+    // width: vw(314, 420);
+    font-size: clamp(16px, 18px, 20px);
+    color: $text_color;
+    // padding: 10px 0 10px 0;
+    text-align: justify;
+}

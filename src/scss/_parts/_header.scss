@@ -82,10 +82,10 @@
 }
 
 header {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
     .header_wrapper {
         -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 0px 7px 20px -7px rgba(0, 0, 0, 0.5);
@@ -102,10 +102,10 @@ header {
         padding: 0 $header_padding 0 $header_padding;
         h1 {
             color: $text_color;
-            font-size: 20px;
-            @media (min-width: $desktop_breakpoint){
-                font-size: 26px;
-            }
+            font-size: clamp(20px, 23px, 26px);
+            // @media (min-width: $desktop_breakpoint){
+            //     font-size: 26px;
+            // }
             font-family: "Quicksand-SemiBold";
         }
         .menu_icon {
@@ -139,7 +139,9 @@ header {
         }
     }
     nav {
-        position: absolute;
+        // position: absolute;
+        position: fixed;
+        top: $header_height;
         right: 0;
         bottom: 0;
         background-color: $menu_color;
@@ -191,7 +193,7 @@ header {
                         text-decoration: underline;
                     }
                     &:visited {
-                        color: inherit;
+                        color: #000;
                     }
                 }
             }
@@ -228,5 +230,7 @@ header {
 
 }
 .relative_header {
-    // height: $header_height;
+    height: $header_height;
+    padding: 0;
+    margin: 0;
 }
