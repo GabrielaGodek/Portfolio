@@ -86,20 +86,24 @@ header {
     top: 0;
     right: 0;
     width: 100%;
+    background-color: $bg_color;
+    z-index: 998;
     .header_wrapper {
-        -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0px 7px 20px -7px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 7px 20px -7px rgba(0, 0, 0, 0.5);
         z-index: 99;
         position: relative;
         display: flex;
-        // width: 100%;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: $header_height;
         background-color: $header_color;
-        padding: 0 $header_padding 0 $header_padding;
+        padding: 9px $header_padding 9px $header_padding;
+        .logo {
+            max-width: 61px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         h1 {
             color: $text_color;
             font-size: clamp(20px, 23px, 26px);
@@ -110,8 +114,8 @@ header {
         }
         .menu_icon {
             position: relative;
-            width: 35px;
-            height: 20px;
+            width: 32px;
+            height: 18px;
             @media(min-width: $desktop_breakpoint) {
                 display: none;
             }
@@ -121,7 +125,7 @@ header {
                 box-shadow: 0 2px 8.5px 0 rgba(0, 0, 0, 0.3);
                 border-radius: 8.5px;
                 height: 3px;
-                background: #fff;
+                background: $text_color;
                 transition: all 0.3s;
                 position: relative;
                 &:nth-child(1) {
@@ -140,12 +144,15 @@ header {
     }
     nav {
         // position: absolute;
-        position: fixed;
+        position: inherit;
+        // top: $header_height;
         top: $header_height;
         right: 0;
         bottom: 0;
-        background-color: $menu_color;
-        height: calc(100% - #{$header_height});
+        background-color: $details_color;
+        color: $bg_color;
+        // height: calc(100% - #{$header_height});
+        height: 100%;
         max-width: 0;
         width: 100%;
         overflow: hidden;
@@ -174,26 +181,27 @@ header {
             }
         }
         ul {
-            padding: $header_height 0 0 0;
+            padding: 140px 82px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
-            gap: 46px;
+            gap: 50px;
             list-style: none;
             width: 100%;
             li {
                 // color: #000;
                 font-family: "Quicksand";
                 font-size: 20px;
+                margin: auto 0;
                 a {
                     text-decoration: none;
-                    color:#000;
+                    color: $bg_color;
                     &.router-link-active {
                         text-decoration: underline;
                     }
                     &:visited {
-                        color: #000;
+                        color: $bg_color;
                     }
                 }
             }

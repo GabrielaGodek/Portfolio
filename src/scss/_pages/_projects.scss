@@ -1,0 +1,50 @@
+@use '../_parts/variables' as *;
+.project_wrapper {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: center;
+  @media (min-width: $desktop_breakpoint) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  h1 {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+  }
+  .project {
+    // flex-basis: 33%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    .img_wrapper {
+      width: 300px;
+      height: 300px;
+      img {
+        width: 100%;
+      }
+    }
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      h2 {
+        font-size: 24px;
+      }
+      .links {
+        padding: 0;
+        color: inherit;
+        img {
+          fill: $text_color;
+          max-width: 20px;
+        }
+      }
+    }
+  }
+}
