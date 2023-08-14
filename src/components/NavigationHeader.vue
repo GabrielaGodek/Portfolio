@@ -36,7 +36,7 @@ document.addEventListener('scroll', () => {
         </ul>
     </nav>
     <div class="header_wrapper">
-        <div class="logo"><img src="../assets/Logo.svg" alt="Gabriela Godek's Portfolio"></div>
+        <div class="logo"><img src="@/assets/Logo.svg" alt="Gabriela Godek's Portfolio"></div>
         <div class="menu_icon" @click="openMenu">
             <span></span>
             <span></span>
