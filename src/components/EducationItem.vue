@@ -1,19 +1,20 @@
 <script >
-import Timeline from './TimelineItem.vue' 
+import { ref } from "vue";
+import Timeline from '@/components/TimelineItem.vue' 
   export default {
     components: {
       Timeline,
     },
     data() {
       return {
-        firstDate: 'Ongoing',
-        firstHeader: 'Master Degree',
-        firstCompany: 'Cracow University of Economics',
-        secondCompany: 'University of Technology at Cracow',
-        secondHeader: 'Bachelor Degree',
-        secondDate: '02.2022',
-        firAddText: 'Applied Informatics',
-        secAddText: 'Physics',
+        firstDate: ref('Ongoing'),
+        firstHeader: ref('Master Degree'),
+        firstCompany: ref('Cracow University of Economics'),
+        secondCompany: ref('University of Technology at Cracow'),
+        secondHeader: ref('Bachelor Degree'),
+        secondDate: ref('02.2022'),
+        firAddText: ref('Applied Informatics'),
+        secAddText: ref('Physics'),
       };
     },
   };

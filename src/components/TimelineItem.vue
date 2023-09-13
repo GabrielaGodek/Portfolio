@@ -1,5 +1,6 @@
 <script>
 export default {
+    name: 'timeLine',
   props: {
         currentDate: String,
         firstHeader: String,

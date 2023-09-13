@@ -1,11 +1,10 @@
-
-
 <script>
 import { reactive } from 'vue'
-import Projects from "../components/ProjectItem.vue";
+import ProjectsItem from "@/components/ProjectItem.vue";
 export default {
+    name: 'projectPage',
     components: {
-        Projects
+        ProjectsItem
     },
     mounted() {
         this.getData()
@@ -34,7 +33,7 @@ export default {
     <section class="project_wrapper">
         <h1>Projects</h1>
         <div class="project" v-for="item in dataAPI" :key="item.id">
-            <Projects :projectDetails="item" />
+            <projects-item :projectDetails="item" />
         </div>
     </section>
 </template>

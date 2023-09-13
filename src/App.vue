@@ -1,15 +1,18 @@
-<script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
-// import WelcomePage from './components/WelcomePage.vue'
-import Navigation from './components/NavigationHeader.vue'
-import Footer from './components/FooterItem.vue'
-// import markActiveLink from './js/script.js'
+<script>
+import navigationHeader from '@/components/NavigationHeader.vue'
+import footerItem from '@/components/FooterItem.vue'
+export default {
+  name: 'app',
+  components: {
+    navigationHeader,
+    footerItem
+  }
+}
 </script>
 
 <template>
   <header>
-    <Navigation/>
+    <navigation-header />
   </header>
   <div class="relative_header"></div>
 
@@ -18,8 +21,6 @@ import Footer from './components/FooterItem.vue'
   </main>
 
   <footer>
-    <Footer/>
+    <footer-item />
   </footer>
 </template>
-
-

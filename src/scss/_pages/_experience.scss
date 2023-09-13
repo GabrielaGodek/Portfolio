@@ -1,41 +1,41 @@
-@use "../_parts/variables" as *;
+@use '../_parts/variables' as *;
 
-.experience_wrapper, .education_wrapper {
+.experience_wrapper,
+.education_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  .timeline_wrapper {
+    margin: 50px 0;
     display: flex;
-    flex-direction: column;
-    margin: auto;
+    gap: 20px;
+    min-height: 250px;
+    flex-direction: column-reverse;
+    @media (min-width: $md_breakpoint) {
+      flex-direction: row;
+    }
+    div {
+      flex: 1 1 50%;
+    }
+  }
+  @media (min-width: $desktop_breakpoint) {
+    padding: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    h1 {
+      flex-basis: 100%;
+    }
     .timeline_wrapper {
-        margin: 50px 0;
-        display: flex;
-        gap: 20px;
-        min-height: 250px;
-        flex-direction: column-reverse;
-        @media (min-width: $md_breakpoint) {
-            flex-direction: row;
-        }
-        div {
-            flex: 1 1 50%;
-        }
+      flex-basis: 50%;
     }
-    @media (min-width: $desktop_breakpoint) {
-        padding: 50px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        h1 {
-            flex-basis: 100%;
-        }
-        .timeline_wrapper {
-            flex-basis: 50%;
-        }
-        .text{
-            flex-basis: 50%;
-            margin: auto;
-        }
+    .text {
+      flex-basis: 50%;
+      margin: auto;
     }
+  }
 }
 @media (min-width: $desktop_breakpoint) {
-    .experience_wrapper {
-        flex-direction: row-reverse;
-    }
+  .experience_wrapper {
+    flex-direction: row-reverse;
+  }
 }
-
