@@ -35,7 +35,7 @@
     "jsdom": "^21.1.0",
     "normalize.css": "^8.0.1",
     "prettier": "^2.8.4",
-    "sass": "^1.62.1",
+    "sass": "^1.67.0",
     "style-loader": "^3.3.2",
     "vite": "^4.1.4",
     "vitest": "^0.29.1"

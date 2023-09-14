@@ -36,6 +36,9 @@ export default {
     },
     closeMenu() {
       this.isOpen = false
+    },
+    scrollUp() {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     }
   }
 }
@@ -54,7 +57,7 @@ export default {
     </ul>
   </nav>
   <div class="header_wrapper">
-    <div class="logo"><img src="@/assets/logo.svg" alt="Gabriela Godek's Portfolio" /></div>
+    <div class="logo" @click="scrollUp"><img src="@/assets/logo.svg" alt="Gabriela Godek's Portfolio" /></div>
     <div class="menu_icon" @click="openMenu">
       <span></span>
       <span></span>
@@ -62,3 +65,245 @@ export default {
     </div>
   </div>
 </template>
+<!-- <style scoped lang="scss">
+@use '_variables' as *;
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 8.5px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 8.5px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 8.5px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 8.5px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 8.5px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 8.5px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 8.5px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 8.5px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: $bg_color;
+  z-index: 998;
+  .header_wrapper {
+    z-index: 99;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: $header_height;
+    background-color: $header_color;
+    padding: 9px $header_padding 9px $header_padding;
+    .logo {
+      max-width: 61px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      color: $text_color;
+      font-size: clamp(20px, 23px, 26px);
+      // @media (min-width: $desktop_breakpoint){
+      //     font-size: 26px;
+      // }
+      font-family: 'Quicksand-SemiBold';
+    }
+    .menu_icon {
+      position: relative;
+      width: 32px;
+      height: 18px;
+      @media (min-width: $desktop_breakpoint) {
+        display: none;
+      }
+      span {
+        display: block;
+        width: 100%;
+        box-shadow: 0 2px 8.5px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 8.5px;
+        height: 3px;
+        background: $text_color;
+        transition: all 0.3s;
+        position: relative;
+        &:nth-child(1) {
+          animation: ease 0.3s top-2 forwards;
+        }
+        &:nth-child(2) {
+          animation: ease 0.3s scaled-2 forwards;
+          margin: 5.5px 0 5.5px 0;
+        }
+
+        &:nth-child(3) {
+          animation: ease 0.3s bottom-2 forwards;
+        }
+      }
+    }
+  }
+  nav {
+    position: inherit;
+    top: $header_height;
+    right: 0;
+    bottom: 0;
+    background-color: $details_color;
+    color: $bg_color;
+    height: 100%;
+    max-width: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    height: 100vh;
+
+    &.open {
+      max-width: $open_menu_width;
+      // height: 100vh;
+      & + .header_wrapper {
+        .menu_icon {
+          span {
+            &:nth-child(1) {
+              animation: ease 0.7s top forwards;
+              // transform: translate(0, 9px) rotate(45deg);
+            }
+            &:nth-child(2) {
+              animation: ease 0.7s scaled forwards;
+            }
+            &:nth-child(3) {
+              animation: ease 0.7s bottom forwards;
+            }
+          }
+        }
+      }
+    }
+    ul {
+      padding: 140px 82px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 50px;
+      list-style: none;
+      width: 100%;
+      li {
+        // color: #000;
+        font-family: 'Quicksand';
+        font-size: 20px;
+        margin: auto 0;
+        a {
+          text-decoration: none;
+          color: $bg_color;
+          &.router-link-active {
+            text-decoration: underline;
+          }
+          &:visited {
+            color: $bg_color;
+          }
+        }
+      }
+    }
+  }
+
+  // desktop
+  @media (min-width: $desktop_breakpoint) {
+    nav {
+      // position: relative;
+      top: 0;
+      max-width: 50%;
+      max-height: $header_height;
+      background-color: transparent;
+      padding: 0 $header_padding 0 0;
+      ul {
+        padding: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 100%;
+        li {
+          a {
+            z-index: 999;
+            color: $text_color;
+            &:visited {
+              color: $text_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.relative_header {
+  height: $header_height;
+  padding: 0;
+  margin: 0;
+}
+
+</style> -->
