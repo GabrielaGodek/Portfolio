@@ -2,15 +2,19 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import '@/scss/style.css'
-// import './scss/style.css.map'
+import vueClickOutsideElement from 'vue-click-outside-element'
 
-import VueClosable from 'vue-closable'
+import { inject } from '@vercel/analytics';
+ 
+inject();
+
+import '@/scss/style.css'
+
 
 const app = createApp(App)
 
 app.use(router)
-app.use(VueClosable)
+app.use(vueClickOutsideElement)
 
 app.mount('#app')
 

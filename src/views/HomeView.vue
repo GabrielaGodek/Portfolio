@@ -63,9 +63,9 @@
       <div class="description">
         <p>
           Currently, I am in the middle of learning TypeScript and Node.js with a strong focus on
-          frontend development. I'm also diving into the whole world of Mobile and Web Design, I
+          frontend development. I'm also diving into the whole world of Mobile and Web Design. I
           believe that this experience will improve communication across the different teams and
-          help focus on the main objective as grow and improvement whole teams.
+          help focus on the main objective as growth and improvement whole teams.
         </p>
         <p>
           I'm excited to apply these skills to create more user-friendly and visually appealing web
