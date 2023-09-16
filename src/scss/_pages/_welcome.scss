@@ -40,6 +40,7 @@ h2 {
 p {
   text-align: left;
 }
+
 .buttons {
   display: inline-flex;
   justify-content: center;
@@ -99,5 +100,17 @@ p {
   ul {
     list-style: none;
     font-size: 16px;
+  }
+}
+
+@media (min-width: $md_breakpoint) {
+  .header_text,
+  h2 {
+    align-self: center;
+    width: 314px;
+  }
+  .buttons {
+    justify-content: space-between;
+    width: 314px;
   }
 }

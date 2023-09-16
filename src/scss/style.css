@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Quicksand";
   src: url("https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-Regular.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Quicksand-SemiBold";
@@ -438,6 +439,17 @@ p {
   font-size: 16px;
 }
 
+@media (min-width: 800px) {
+  .header_text,
+  h2 {
+    align-self: center;
+    width: 314px;
+  }
+  .buttons {
+    justify-content: space-between;
+    width: 314px;
+  }
+}
 .experience_wrapper,
 .education_wrapper {
   display: flex;

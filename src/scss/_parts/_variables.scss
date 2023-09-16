@@ -24,10 +24,12 @@ $open_menu_width: 293px;
 @font-face {
     font-family: 'Quicksand';
     src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-Regular.otf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Quicksand-SemiBold';
     src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-SemiBold.otf');
+    
 }
 
 @function vw($w, $h) {
