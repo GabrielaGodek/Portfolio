@@ -99,10 +99,11 @@ header {
     background-color: $header_color;
     padding: 9px $header_padding 9px $header_padding;
     .logo {
-      max-width: 61px;
+      // max-width: 61px;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-weight: bold;
     }
     h1 {
       color: $text_color;

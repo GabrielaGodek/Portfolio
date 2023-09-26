@@ -57,7 +57,7 @@ export default {
   </nav>
   <div class="header_wrapper">
     <div class="logo" @click="scrollUp">
-      <img width="62" height="30" src="@/assets/logo.svg" alt="Gabriela Godek's Portfolio" />
+      <font-awesome-icon icon="fa-solid fa-laptop-code" size="lg" style="color: #323232;"/>&nbsp;|&nbsp;GG
     </div>
     <div class="menu_icon" @click="toggleMenu">
       <span></span>

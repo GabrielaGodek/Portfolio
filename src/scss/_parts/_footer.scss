@@ -1,58 +1,62 @@
 @use '_variables' as *;
 
 footer {
-    max-height: $footer_height;
+  max-height: $footer_height;
+  height: 100%;
+  background-color: $footer_color;
+  position: relative;
+  @media (min-width: $desktop_breakpoint) {
+    max-height: $d_footer_height;
+  }
+  .wrapper {
     height: 100%;
-    background-color: $footer_color;
-    position: relative;
-    @media (min-width: $desktop_breakpoint) {
-        max-height: $d_footer_height;
-    }
-   .wrapper {
-     height: 100%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     //  width: 100%;
-     padding: 0 $header_padding 0 $header_padding;
+    padding: 0 $header_padding 0 $header_padding;
     //  position: relative;
-     .contact_icon {
-        display: flex;
-        width: 74px;
-        height: 76px;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
-        row-gap: 10px;
-        flex-shrink: 0;
-        flex-wrap: wrap;
-       
-         
-         @media (min-width: $desktop_breakpoint) {
-            & {
-                flex-direction: row;
-                align-items: center;
-                max-width: 268px;
-                width: 100%;
-                height: unset;
-            }
+    .contact_icon {
+      display: flex;
+      width: 74px;
+      height: 76px;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+      row-gap: 10px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      a {
+        flex: 1 1 50%;
+      }
+
+      @media (min-width: $desktop_breakpoint) {
+        & {
+          flex-direction: row;
+          align-items: center;
+          max-width: 268px;
+          width: 100%;
+          height: unset;
+          a {
+            flex: 1 1 25%;
+          }
         }
-     }
-     
-     .signature {
-        font-size: 19px;
-        text-align: right;
-        font-family: 'Quicksand';
-        .d_hide {
-            display: block;
-            max-height: 0;
-            @media (min-width: $desktop_breakpoint) {
-                & {
-                    display: none;
-                }
-            }
+      }
+    }
+
+    .signature {
+      font-size: 19px;
+      text-align: right;
+      font-family: 'Quicksand';
+      .d_hide {
+        display: block;
+        max-height: 0;
+        @media (min-width: $desktop_breakpoint) {
+          & {
+            display: none;
+          }
         }
-        
-     }
-   }
+      }
+    }
+  }
 }

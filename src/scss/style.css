@@ -102,10 +102,10 @@ header .header_wrapper {
   padding: 9px 18px 9px 18px;
 }
 header .header_wrapper .logo {
-  max-width: 61px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 header .header_wrapper h1 {
   color: #323232;
@@ -252,6 +252,9 @@ footer .wrapper .contact_icon {
   flex-shrink: 0;
   flex-wrap: wrap;
 }
+footer .wrapper .contact_icon a {
+  flex: 1 1 50%;
+}
 @media (min-width: 1000px) {
   footer .wrapper .contact_icon {
     flex-direction: row;
@@ -259,6 +262,9 @@ footer .wrapper .contact_icon {
     max-width: 268px;
     width: 100%;
     height: unset;
+  }
+  footer .wrapper .contact_icon a {
+    flex: 1 1 25%;
   }
 }
 footer .wrapper .signature {
@@ -320,7 +326,7 @@ h2,
 p,
 div {
   font-family: "Quicksand";
-  font-size: 20px;
+  font-size: 18px;
   color: #323232;
   text-align: justify;
 }

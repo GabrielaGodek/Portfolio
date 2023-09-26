@@ -14,6 +14,11 @@
     "sass-prod": "sass --no-source-map --style=compressed src/scss:src/scss"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vercel/analytics": "^1.0.2",
     "node-sass": "^8.0.0",
     "normalize-scss": "^7.0.1",

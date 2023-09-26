@@ -62,8 +62,8 @@
       </div>
       <div class="description">
         <p>
-          Currently, I am in the middle of learning TypeScript and Node.js with a strong focus on
-          frontend development. I'm also diving into the whole world of Mobile and Web Design. I
+          Currently, I am in the middle of learning <u>TypeScript</u> and <u>Node.js & Express.js</u> with a strong focus on
+          frontend development. I'm also diving into the whole world of Mobile and Web Design with Figma. I
           believe that this experience will improve communication across the different teams and
           help focus on the main objective as growth and improvement whole teams.
         </p>
