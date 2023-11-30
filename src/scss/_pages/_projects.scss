@@ -11,6 +11,7 @@
     width: 100%;
     max-width: none;
     margin-bottom: 40px;
+
   }
   .project {
     // flex-basis: 33%;
@@ -34,15 +35,16 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
       // width: 100%;
       h2 {
-        font-size: 24px;
+        font-size: 20px;
         align-self: flex-start;
       }
       .links {
         padding: 0;
         color: inherit;
+        font-size: 14px;
         img {
           fill: $text_color;
           max-width: 20px;
@@ -50,6 +52,8 @@
       }
       .tech {
         justify-content: flex-start;
+        font-size: 16px;
+        font-style: italic;
       }
     }
   }

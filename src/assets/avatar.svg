@@ -1,1 +1,27 @@
-<svg viewBox="0 0 36 36" fill="none" role="img" xmlns="http://www.w3.org/2000/svg" width="80" height="80"><mask id=":r1l:" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36"><rect width="36" height="36" fill="#FFFFFF" rx="72"></rect></mask><g mask="url(#:r1l:)"><rect width="36" height="36" fill="#323232"></rect><rect x="0" y="0" width="36" height="36" transform="translate(1 7) rotate(63 18 18) scale(1)" fill="#786452" rx="36"></rect><g transform="translate(-7 3.5) rotate(3 18 18)"><path d="M13,19 a1,0.75 0 0,0 10,0" fill="#FFFFFF"></path><rect x="11" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#FFFFFF"></rect><rect x="23" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#FFFFFF"></rect></g></g></svg>
+<svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Avatar" clip-path="url(#clip0_171_438)">
+<g id="Mask group">
+<mask id="mask0_171_438" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="74" height="74">
+<g id="Group">
+<path id="Vector" d="M74 37C74 16.5655 57.4345 0 37 0C16.5655 0 0 16.5655 0 37C0 57.4345 16.5655 74 37 74C57.4345 74 74 57.4345 74 37Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_171_438)">
+<g id="Group_2">
+<path id="Vector_2" d="M74 0H0V74H74V0Z" fill="#5E635F"/>
+<path id="Vector_3" d="M53.1381 78.5285C73.3412 68.6748 81.7311 44.3089 71.8774 24.1058C62.0236 3.90274 37.6578 -4.48709 17.4547 5.36661C-2.74836 15.2203 -11.1382 39.5862 -1.28449 59.7892C8.56921 79.9923 32.9351 88.3822 53.1381 78.5285Z" fill="#C6D7D1"/>
+<g id="Group_3">
+<path id="Vector_4" d="M30.5616 32.4487C34.5193 34.7861 38.6204 35.0728 42.8649 33.3091" stroke="black" stroke-width="3.55556" stroke-linecap="round"/>
+<path id="Vector_5" d="M24.1016 21.6941C24.1808 20.5616 23.5564 19.5954 22.7071 19.536C21.8577 19.4766 21.105 20.3466 21.0258 21.479C20.9466 22.6115 21.5709 23.5777 22.4203 23.6371C23.2697 23.6965 24.0224 22.8266 24.1016 21.6941Z" fill="black"/>
+<path id="Vector_6" d="M52.8093 23.7016C52.8885 22.5691 52.2641 21.6029 51.4147 21.5435C50.5654 21.4841 49.8126 22.354 49.7334 23.4865C49.6543 24.619 50.2786 25.5852 51.128 25.6446C51.9773 25.704 52.7301 24.8341 52.8093 23.7016Z" fill="black"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_171_438">
+<rect width="74" height="74" fill="white"/>
+</clipPath>
+</defs>
+</svg>

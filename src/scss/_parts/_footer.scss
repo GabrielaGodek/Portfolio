@@ -1,28 +1,29 @@
 @use '_variables' as *;
 
 footer {
-  max-height: $footer_height;
-  height: 100%;
+  height: $footer_height;
+  // height: 100%;
   background-color: $footer_color;
   position: relative;
   @media (min-width: $desktop_breakpoint) {
     max-height: $d_footer_height;
   }
   .wrapper {
+    padding: 6px 48px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     //  width: 100%;
-    padding: 0 $header_padding 0 $header_padding;
     //  position: relative;
     .contact_icon {
       display: flex;
       width: 74px;
       height: 76px;
       justify-content: space-between;
-      align-items: flex-start;
-      align-content: flex-start;
+      align-items: center;
+      align-content: center;
       row-gap: 10px;
       flex-shrink: 0;
       flex-wrap: wrap;
@@ -47,7 +48,8 @@ footer {
     .signature {
       font-size: 19px;
       text-align: right;
-      font-family: 'Quicksand';
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
       .d_hide {
         display: block;
         max-height: 0;

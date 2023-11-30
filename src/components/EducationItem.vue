@@ -1,36 +1,45 @@
-<script >
+<script>
 import { ref } from "vue";
-import Timeline from '@/components/TimelineItem.vue' 
-  export default {
-    components: {
-      Timeline,
-    },
-    data() {
-      return {
-        firstDate: ref('Ongoing'),
-        firstHeader: ref('Master Degree'),
-        firstCompany: ref('Cracow University of Economics'),
-        secondCompany: ref('University of Technology at Cracow'),
-        secondHeader: ref('Bachelor Degree'),
-        secondDate: ref('02.2022'),
-        firAddText: ref('Applied Informatics'),
-        secAddText: ref('Physics'),
-      };
-    },
-  };
+import TimelineItem from "@/components/TimelineItem.vue";
+
+export default {
+  name: "EducationItem",
+  components: {
+    TimelineItem,
+  },
+  data() {
+    return {
+      timelineItems: ref([
+        {
+          date: "Ongoing",
+          header: "Master's Degree",
+          company: "Applied Informatics",
+          subHeader: "University of Technology at Cracow",
+          isSubHeader: true,
+        },
+        {
+          date: "02.2022",
+          header: "Bachelor's Degree",
+          company: "Physics",
+          subHeader: "University of Technology at Cracow",
+          isSubHeader: true,
+        },
+      ]),
+    };
+  },
+};
 </script>
 
 <template>
-  <section class="education_wrapper">
+  <section class="wrapper">
     <h1>Education</h1>
     <div class="timeline_wrapper">
-      <Timeline :firstHeader="firstHeader" :firAddText="firAddText" :firstDesc="firstDesc" :firstCompany="firstCompany" :currentDate="firstDate"
-        :secondHeader="secondHeader" :secAddText="secAddText" :secondCompany="secondCompany" :secondDate="secondDate"/>
+      <TimelineItem :items="timelineItems" />
     </div>
     <div class="text">
-      <p>During my engineering studies, I conducted many simulations of physical phenomena using the Python language. </p>
-      <p>Throughout master's studies, I mainly use JavaScript and Python. For individual projects also R and Vue.js</p>
+      <p>
+        During my engineering studies, I conducted many simulations of physical phenomena using the <strong>Python</strong> language. Throughout master's studies, I mainly use <strong>JavaScript</strong> and <strong>Python</strong>. For individual projects also <strong>R</strong>, <strong>Vue.js</strong> or <strong>React.js</strong>
+      </p>
     </div>
   </section>
-  
 </template>

@@ -1,77 +1,82 @@
 <template>
-  <div class="main_wrapper">
-    <section class="first_view">
-      <div class="avatar">
-        <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
-      </div>
-      <h2>Hello there,<br />I’m Gabriela</h2>
-      <p class="header_text">
+  <section class="hero view">
+    <div class="avatar">
+      <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
+    </div>
+    <div class="greeting">
+      <h1>Hello there,<br />I’m Gabriela</h1>
+      <h2 class="header_text">
         A young, ambitious web developer keen on resolving intricate challenges.
-      </p>
+      </h2>
       <div class="buttons">
         <router-link to="projects">Project</router-link>
         <router-link to="experience">Experience</router-link>
       </div>
-    </section>
-    <section class="second_view">
-      <div class="avatar">
-        <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
+    </div>
+  </section>
+  <section class="second view">
+    <div class="avatar">
+      <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
+    </div>
+    <div class="description">
+      <p>
+        My professional aspiration is to attain mastery in <strong>Web Development</strong>,
+        dedicated to crafting aesthetically pleasing and user-friendly solutions
+        that enhance the overall user experience and simplify daily life.
+        Throughout my experience as a web developer and through independent
+        learning, I have come to appreciate the significance of conscientious
+        planning in implementing functionality. With a well-prepared project and
+        a clear understanding of the objectives, project execution becomes
+        seamless, and the resulting code remains clean.
+      </p>
+      <p>
+        My commitment lies in delivering functionalities that are effective and
+        aligned with the specified requirements, accompanied by well-organized
+        and aesthetically pleasing code.
+      </p>
+    </div>
+    <div class="tech">
+      <div class="daily">
+        <h3 class="header">Professionally, I use</h3>
+        <ul>
+          <li>JavaScript (ES6+)</li>
+          <li>CSS3 + SASS</li>
+          <li>Semantic HTML</li>
+        </ul>
       </div>
-      <div class="description">
-        <p>
-          My life goal is to become an expert in my chosen field. For this purpose, I regularly
-          update and expand my knowledge. I like getting into substantive discussions and
-          brainstorming.
-        </p>
-        <p>
-          At my current position I am mostly responsible for creating, implementing and maintaining
-          features using JavaScript language and occasionally jQuery library. Furthermore, one of my
-          key responsibilities is coding campaign Landing Pages based on projects prepared in Figma,
-          Adobe XD or Adobe Photoshop.
-        </p>
-        <p>
-          Moreover, I played an instrumental role in the successful implementation of a new
-          e-commerce website.
-        </p>
+      <div class="additional">
+        <h4 class="header">But I can also use</h4>
+        <ul>
+          <li>Python</li>
+          <li>PHP</li>
+          <li>WordPress</li>
+        </ul>
       </div>
-      <div class="tech">
-        <div class="daily">
-          <h3 class="header">I use on daily basis</h3>
-          <ul>
-            <li>JavaScript (ES6+)</li>
-            <li>Sass/CSS3</li>
-            <li>Semantic HTML</li>
-          </ul>
-        </div>
-        <div class="additional">
-          <h3 class="header">But I can use</h3>
-          <ul>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>WordPress</li>
-          </ul>
-        </div>
-        <div class="tools">
-          <h3 class="header">Tools</h3>
-          <ul>
-            <li>VS Code</li>
-            <li>Jira</li>
-            <li>Figma</li>
-          </ul>
-        </div>
+      <div class="additional">
+        <h3 class="header">Outside of work I use</h3>
+        <ul>
+          <li>Vue.js 3</li>
+          <li>TypeScript</li>
+          <li>Node.js + Express</li>
+        </ul>
       </div>
-      <div class="description">
-        <p>
-          Currently, I am in the middle of learning <u>TypeScript</u> and <u>Node.js & Express.js</u> with a strong focus on
-          frontend development. I'm also diving into the whole world of Mobile and Web Design with Figma. I
-          believe that this experience will improve communication across the different teams and
-          help focus on the main objective as growth and improvement whole teams.
-        </p>
-        <p>
-          I'm excited to apply these skills to create more user-friendly and visually appealing web
-          experiences.
-        </p>
+      <div class="tools">
+        <h3 class="header">Tools</h3>
+        <ul>
+          <li>VS Code</li>
+          <li>Jira</li>
+          <li>Figma</li>
+        </ul>
       </div>
-    </section>
-  </div>
+      <div class="tools">
+        <h3 class="header">Currently learning</h3>
+        <ul>
+          <li>Vitest + Jest</li>
+          <li>MongoDB + Mongoose</li>
+          <li>Vite + Webpack</li>
+        </ul>
+      </div>
+    </div>
+    
+  </section>
 </template>

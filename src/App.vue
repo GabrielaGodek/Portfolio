@@ -11,12 +11,10 @@ export default {
 </script>
 
 <template>
-  <header>
     <navigation-header />
-  </header>
   <div class="relative_header"></div>
 
-  <main>
+  <main class="main_wrapper">
     <router-view></router-view>
   </main>
 

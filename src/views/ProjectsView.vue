@@ -1,46 +1,47 @@
 <script>
-import { reactive } from 'vue'
-import ProjectsItem from '@/components/ProjectItem.vue'
+import { ref, onBeforeMount } from 'vue';
+import ProjectsItem from '@/components/ProjectItem.vue';
+
 export default {
-  name: 'projectPage',
+  name: 'ProjectPage',
   components: {
-    ProjectsItem
+    ProjectsItem,
   },
-  mounted() {
-    this.getData()
-  },
-  data() {
-    return {
-      dataAPI: reactive([]),
-      errorMessage: ''
-    }
-  },
-  methods: {
-    async getData() {
+  setup() {
+    const dataAPI = ref([]);
+    const errorMessage = ref('');
+
+    const getData = async () => {
       try {
-        const response = await fetch(
-          `https://my-json-server.typicode.com/GabrielaGodek/Portfolio-API/projects`
-        )
-        let data = await response.json()
+        const response = await fetch(`https://portfolio-database-9j2y.onrender.com/api/v1/projects`);
+        const data = await response.json();
 
         if (response.ok) {
-          this.dataAPI = data
+          dataAPI.value = data.data;
         } else {
-          const error = response.status
-          throw error
+          const error = response.status;
+          throw error;
         }
       } catch (error) {
-        console.error(error)
+        console.error(error);
+        errorMessage.value = 'Failed to fetch data';
       }
-    }
-  }
-}
+    };
+
+    onBeforeMount(getData);
+
+    return {
+      dataAPI,
+      errorMessage,
+    };
+  },
+};
 </script>
+
 <template>
   <section class="project_wrapper">
     <h1>Projects</h1>
-    <div class="project" v-for="item in dataAPI" :key="item.id">
-      <projects-item :projectDetails="item" />
-    </div>
+      <ProjectsItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
+    
   </section>
 </template>

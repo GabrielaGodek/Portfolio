@@ -1,4 +1,8 @@
 @use 'variables' as *;
+html {
+  // display: flex;
+  // flex-direction: column;
+}
 body,
 body * {
   margin: 0;
@@ -7,6 +11,7 @@ body * {
 }
 body {
   background-color: $bg_color;
+  flex-grow: 1;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -16,26 +21,33 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid $details_color;
   border-radius: 5px;
 }
-#app {
-  height: 100vh;
-  padding: 0;
+strong {
+  font-size: 600;
 }
-section {
-  min-height: 50vh;
-  padding: 0 $header_padding;
+main.main_wrapper {
+  padding: 50px 23px 20px;
 }
-main {
-  height: auto;
-  @media (min-width: $desktop_breakpoint) {
-    padding-bottom: 138px;
-  }
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+}
+h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 300;
 }
 
-h2,
+
 p,
 div {
-  font-family: 'Quicksand';
-  font-size: clamp(16px, 18px, 20px);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   color: $text_color;
   text-align: justify;
 }

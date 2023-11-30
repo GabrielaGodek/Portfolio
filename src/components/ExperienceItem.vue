@@ -1,51 +1,71 @@
 <script>
-import Timeline from '@/components/TimelineItem.vue'
-import { ref } from 'vue'
+import { ref } from "vue";
+import TimelineItem from "@/components/TimelineItem.vue";
+
 export default {
-  name: 'experienceItem',
+  name: "ExperienceItem",
   components: {
-    Timeline
+    TimelineItem,
   },
   data() {
     return {
-      currentDate: ref('Ongoing'),
-      firstHeader: ref('Junior Web Developer'),
-      firstDesc: ref('Marketing Investment Group'),
-      secondHeader: ref('Assistant Web Developer'),
-      secondDate: ref('03.2022')
-    }
-  }
-}
+      timelineItems: ref([
+        {
+          date: "10.2023",
+          header: "Junior Web Developer",
+          company: "Marketing Investment Group",
+          subHeader: "",
+          isSubHeader: false,
+        },
+        {
+          date: "03.2022",
+          header: "Assistant Web Developer",
+          company: "Marketing Investment Group",
+          subHeader: "",
+          isSubHeader: false,
+        },
+      ]),
+    };
+  },
+};
 </script>
+
 <template>
-  <section class="experience_wrapper">
+  <section class="wrapper">
     <h1>Experience</h1>
     <div class="timeline_wrapper">
-      <Timeline
-        :firstHeader="firstHeader"
-        :firstCompany="firstDesc"
-        :currentDate="currentDate"
-        :secondHeader="secondHeader"
-        :secondCompany="firstDesc"
-        :secondDate="secondDate"
-      />
+      <TimelineItem :items="timelineItems" />
     </div>
     <div class="text">
       <p>
-        In my professional work, using JavaScript and Sass, I create responsive and accessible
-        Landing Pages and advanced features for e-commerce stores, thereby enhancing the overall
-        User Experience.
+        In my role as a <strong>Web Developer</strong>, my primary
+        responsibilities revolved around creating, implementing, and maintaining
+        features using <strong>PHP</strong>, <strong>JinJava</strong> and
+        <strong>JavaScript</strong>, alongside open-source libraries such as
+        <strong>jQuery</strong>. I also mastered coding campaign landing pages
+        based on projects designed in <strong>Figma</strong>,
+        <strong>Adobe XD</strong>, or <strong>Adobe Photoshop</strong>.
+      <br>
+        A noteworthy achievement includes my <strong>
+          significant contribution to the
+          successful implementation
+        </strong> of a new e-commerce website. Throughout this
+        long-term project, I took on a<strong> mentoring role, guiding and supporting</strong>
+        new members of the team. I conducted <strong>onboarding trainings</strong> for
+        the newest members of the team. 
+        </p>
+        <p>
+        At present, I am actively engaged in
+        mastering <strong>TypeScript</strong> and <strong>Node.js</strong>, including <strong>Express</strong>, and refining my
+        proficiency in <strong>unit testing</strong> with <strong>Jest</strong> and <strong>Vitest</strong>, with a strong
+        dedication to <strong>frontend development</strong>. This pursuit is complemented by my
+        exploration of <strong>MongoDB</strong> with <strong>Mongoose</strong>, further broadening my skill set.
+        Additionally, I am delving into the realms of Mobile and Web Design.
       </p>
       <p>
-        I also actively participate in the implementation of new stores. My responsibilities include
-        ensuring the timely completion of all tasks assigned to the team and aligning the Product
-        Owner's ideas with the technological limitations and possibilities of the existing store
-        infrastructure.
-      </p>
-      <p>
-        Recently, I had the opportunity to collaborate on a project involving WordPress, where I
-        contributed to the creation of an online catalog and a blog for one of the top fashion
-        brands.
+        I believe that this comprehensive knowledge will not only facilitate
+        improved communication among teams but also significantly contribute to
+        the primary objective of enhancing overall team growth and performance.
       </p>
     </div>
   </section>

@@ -88,6 +88,7 @@ header {
   width: 100%;
   background-color: $bg_color;
   z-index: 998;
+
   .header_wrapper {
     z-index: 99;
     position: relative;
@@ -104,15 +105,10 @@ header {
       justify-content: center;
       align-items: center;
       font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
     }
-    h1 {
-      color: $text_color;
-      font-size: clamp(20px, 23px, 26px);
-      // @media (min-width: $desktop_breakpoint){
-      //     font-size: 26px;
-      // }
-      font-family: 'Quicksand-SemiBold';
-    }
+ 
     .menu_icon {
       position: relative;
       width: 32px;
@@ -189,8 +185,8 @@ header {
       width: 100%;
       li {
         // color: #000;
-        font-family: 'Quicksand';
-        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26px;
         margin: auto 0;
         a {
           text-decoration: none;
@@ -206,6 +202,12 @@ header {
     }
   }
 
+  &.scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   // desktop
   @media (min-width: $desktop_breakpoint) {
     nav {

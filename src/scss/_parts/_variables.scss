@@ -3,36 +3,36 @@ $xs_breakpoint: 435px;
 $md_breakpoint: 800px;
 
 
-$bg_color: #DDD0C8;
-$header_color: #DDD0C8;
-$details_color: #323232;
+$bg_color: #AAAAAA;
+$header_color: #AAAAAA;
+$details_color: #343837;
 
-$text_color: #323232;
+$text_color: #141414;
 
 $header_height: 50px;
+$footer_height: 132px;
 
-$footer_height: 134px;
 $d_footer_height: 50px;
-$footer_color: #DDD0C8;
+$footer_color: #AAAAAA;
 
-$menu_color: #323232;
+$menu_color: #343837;
 
 $header_padding: 18px;
 
 $open_menu_width: 293px;
 
-@font-face {
-    font-family: 'Quicksand';
-    src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-Regular.otf');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Quicksand-SemiBold';
-    src: url('https://cdn.statically.io/gh/GabrielaGodek/Fonts/main/Quicksand_Complete/Fonts/OTF/Quicksand-SemiBold.otf');
+// @font-face {
+//     font-family: 'Montserrat';
+//     src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: 'OpenSans';
+//     src: url('../assets/fonts/OpenSans/OpenSans-Light.ttf')format('truetype');
     
-}
+// }
 
 @function vw($w, $h) {
-    $vw: calc($w / ($h / 100vw)); 
+    $vw: calc($h / ($w / 100)) * 1vw; 
     @return $vw;
 }
