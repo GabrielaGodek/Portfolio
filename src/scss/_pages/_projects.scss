@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   justify-items: center;
+  min-height: 100lvh;
   @media (min-width: $desktop_breakpoint) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

@@ -27,10 +27,15 @@
     }
     .timeline_wrapper {
       flex-basis: 50%;
+      justify-content: center;
     }
     .text {
       flex-basis: 50%;
       margin: auto;
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
 

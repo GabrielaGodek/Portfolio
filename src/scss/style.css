@@ -182,6 +182,11 @@ header nav ul li a.router-link-active {
 header nav ul li a:visited {
   color: #AAAAAA;
 }
+@media (min-width: 1000px) {
+  header nav ul li {
+    font-size: 18px;
+  }
+}
 header.scroll {
   position: fixed;
   top: 0;
@@ -363,6 +368,15 @@ p {
   font-size: 18px;
   letter-spacing: 0.027px;
 }
+@media (min-width: 1000px) {
+  .hero .avatar {
+    margin-bottom: 0;
+  }
+  .hero .greeting {
+    padding: 2.5520833333vw 0;
+    gap: 3.3854166667vw;
+  }
+}
 
 .second .avatar {
   justify-content: flex-end;
@@ -416,6 +430,16 @@ p {
   max-width: 123.0283911672vw;
   width: 100%;
 }
+@media (min-width: 1000px) {
+  .description {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+  .description p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 
 .tech {
   max-width: 123.0283911672vw;
@@ -428,19 +452,14 @@ p {
   .tech {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 60vw;
+    margin: 0 auto;
   }
   .tech div {
-    flex: 1 1 20%;
-  }
-  .tech div.daily {
-    text-align: left;
-  }
-  .tech div.additional {
+    flex: 1 1 30%;
     text-align: center;
-  }
-  .tech div.tools {
-    text-align: right;
   }
 }
 .tech .header {
@@ -448,7 +467,7 @@ p {
   font-size: 20px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-style: normal;
 }
 .tech ul {
   list-style: none;
@@ -498,10 +517,15 @@ p {
   }
   .wrapper .timeline_wrapper {
     flex-basis: 50%;
+    justify-content: center;
   }
   .wrapper .text {
     flex-basis: 50%;
     margin: auto;
+  }
+  .wrapper .text p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 .wrapper p {
@@ -520,6 +544,7 @@ p {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   justify-items: center;
+  min-height: 100lvh;
 }
 @media (min-width: 1000px) {
   .project_wrapper {

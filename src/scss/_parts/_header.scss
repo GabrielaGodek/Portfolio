@@ -198,6 +198,9 @@ header {
             color: $bg_color;
           }
         }
+        @media(min-width: $desktop_breakpoint) {
+          font-size: 18px;
+        }
       }
     }
   }
