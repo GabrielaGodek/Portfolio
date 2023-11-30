@@ -383,7 +383,7 @@ p {
   transform: scaleX(-1);
 }
 .second p {
-  font-size: 12px;
+  font-size: 14px;
   text-align: justify;
 }
 
@@ -523,14 +523,10 @@ p {
     flex-basis: 50%;
     margin: auto;
   }
-  .wrapper .text p {
-    font-size: 14px;
-    line-height: 20px;
-  }
 }
 .wrapper p {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: 0.08px;
   text-align: justify;
 }
