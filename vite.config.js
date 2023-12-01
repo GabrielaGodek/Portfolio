@@ -1,35 +1,24 @@
 import { fileURLToPath, URL } from 'node:url';
 import vue from '@vitejs/plugin-vue';
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx';
-
+import { visualizer } from "rollup-plugin-visualizer";
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '',
-  plugins: [vue(), vueJsx()],
+  cssCodeSplit: true,
+  plugins: [vue(), vueJsx(), visualizer({ open: true }), splitVendorChunkPlugin()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "/src/scss/_variables.scss";`
-      }
-    }
-  },
   build: {
-    assetsInlineLimit: 4096,
-    chunkSizeWarningLimit: 1500,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // Separate third-party libraries into a vendor chunk
-          vendor: /[\\/]node_modules[\\/]/,
-        },
-      },
-    },
-  },
+    commonjsOptions: {
+      strictRequires: [
+        new RegExp('@fortawesome\/[\\w]+-[\\w]+-svg-icons\/fa[\\w]+\.js')
+      ]
+    }
+  }
+
 
 });

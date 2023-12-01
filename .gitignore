@@ -1,4 +1,7 @@
 node_modules 
 vue.config.js
 .vercel
+stats.html
+dist
 Gabriela Godek.pdf
+vitest.config.js
