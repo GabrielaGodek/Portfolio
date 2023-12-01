@@ -19,7 +19,7 @@ import { inject } from '@vercel/analytics';
 inject();
 
 import '@/scss/style.css'
-import progressBar from '@/includes/progressBar'
+import nprogressBar from '@/includes/nprogress'
 import "nprogress/nprogress.css"
 
 const app = createApp(App)
@@ -27,7 +27,7 @@ library.add(faGithub, faLinkedin, faEnvelopeOpenText, faFile, faUpRightFromSquar
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(router)
-progressBar(router)
+nprogressBar(router)
 app.use(vueClickOutsideElement)
 
 app.mount('#app')
