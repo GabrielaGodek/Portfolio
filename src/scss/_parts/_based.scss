@@ -1,8 +1,5 @@
 @use 'variables' as *;
-html {
-  // display: flex;
-  // flex-direction: column;
-}
+
 body,
 body * {
   margin: 0;
@@ -27,12 +24,8 @@ strong {
 main.main_wrapper {
   padding: 50px 23px 20px;
 }
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-}
-h2, h3, h4 {
+
+h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
@@ -45,7 +38,6 @@ h3, h4 {
 
 p,
 div {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: $text_color;

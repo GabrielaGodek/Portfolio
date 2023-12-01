@@ -14,10 +14,6 @@ import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import { faFile } from '@fortawesome/free-regular-svg-icons'
 
-import { inject } from '@vercel/analytics';
- 
-inject();
-
 import '@/scss/style.css'
 import nprogressBar from '@/includes/nprogress'
 import "nprogress/nprogress.css"
