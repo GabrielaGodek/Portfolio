@@ -13,7 +13,7 @@ export default {
 
     const getData = async () => {
       try {
-        const response = await fetch(`/src/assets/db/db.json`);
+        const response = await fetch(`/db/db.json`);
         const data = await response.json();
 
         if (response.ok) {
