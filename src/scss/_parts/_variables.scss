@@ -2,9 +2,8 @@ $desktop_breakpoint: 1000px;
 $xs_breakpoint: 435px;
 $md_breakpoint: 800px;
 
-
-$bg_color: #AAAAAA;
-$header_color: #AAAAAA;
+$bg_color: #aaaaaa;
+$header_color: #aaaaaa;
 $details_color: #343837;
 
 $text_color: #141414;
@@ -13,7 +12,7 @@ $header_height: 50px;
 $footer_height: 132px;
 
 $d_footer_height: 50px;
-$footer_color: #AAAAAA;
+$footer_color: #aaaaaa;
 
 $menu_color: #343837;
 
@@ -21,18 +20,32 @@ $header_padding: 18px;
 
 $open_menu_width: 293px;
 
-// @font-face {
-//     font-family: 'Montserrat';
-//     src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
-//     font-display: swap;
-// }
-// @font-face {
-//     font-family: 'OpenSans';
-//     src: url('../assets/fonts/OpenSans/OpenSans-Light.ttf')format('truetype');
-    
-// }
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat/static/Montserrat-Regular.woff2")
+      format("woff2"),
+    url("/public/fonts/Montserrat/static/Montserrat-Light.woff2")
+      format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/public/fonts/Open_Sans/static/OpenSans-Light.woff2")
+      format("woff2"),
+    url("/public/fonts/Open_Sans/static/OpenSans-ExtraBold.woff2")
+      format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans--bold";
+  src: url("/public/fonts/Open_Sans/static/OpenSans-SemiBold.woff2")
+    format("woff2");
+  font-display: swap;
+}
 
 @function vw($w, $h) {
-    $vw: calc($h / ($w / 100)) * 1vw; 
-    @return $vw;
+  $vw: calc($h / ($w / 100)) * 1vw;
+  @return $vw;
 }

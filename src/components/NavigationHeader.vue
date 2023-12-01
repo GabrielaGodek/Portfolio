@@ -11,12 +11,6 @@ export default {
     const scrollingUp = ref(false)
     const target = ref(null)
 
-    const toggleMenu = () => {
-      if (window.innerWidth < 1000) {
-        isOpen.value = true;
-      }
-    };
-
     const scrollUp = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
@@ -32,8 +26,6 @@ export default {
     };
 
     onClickOutside(target, (event) => {
-      console.log(event.target.outerHTML.includes('span'))
-
       if(event.target.outerHTML.includes('span')){
         isOpen.value = !isOpen.value
       } else {
@@ -52,7 +44,6 @@ export default {
 
     return {
       isOpen,
-      toggleMenu,
       scrollUp,
       scrollingUp,
       target
@@ -66,17 +57,17 @@ export default {
   <nav class="navigation" :class="{ open: isOpen }" ref="target">
     <ul>
       <li title="home">
-        <router-link :to="{ name: 'home' }" @click="toggleMenu"
+        <router-link :to="{ name: 'home' }"
           >Home</router-link
         >
       </li>
       <li title="experience">
-        <router-link :to="{ name: 'experience' }" @click="toggleMenu"
+        <router-link :to="{ name: 'experience' }"
           >Experience</router-link
         >
       </li>
       <li title="projects">
-        <router-link :to="{ name: 'projects' }" @click="toggleMenu"
+        <router-link :to="{ name: 'projects' }"
           >Projects</router-link
         >
       </li>
@@ -90,7 +81,7 @@ export default {
         style="color: #343837"
       />&nbsp;|&nbsp;GG
     </div>
-    <div class="menu_icon" @click="toggleMenu">
+    <div class="menu_icon">
       <span></span>
       <span></span>
       <span></span>

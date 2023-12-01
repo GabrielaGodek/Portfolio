@@ -19,22 +19,24 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 strong {
-  font-size: 600;
+  font-family: 'OpenSans--bold', sans-serif;
+  font-weight: 600;
 }
 main.main_wrapper {
   padding: 50px 23px 20px;
 }
 
-h2 {
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 h3, h4 {
-  font-family: 'Open Sans', sans-serif;
   font-style: italic;
-  font-weight: 300;
 }
-
+body, h3, h4 {
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
 
 p,
 div {
