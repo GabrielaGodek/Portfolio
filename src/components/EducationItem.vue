@@ -31,15 +31,9 @@ export default {
 </script>
 
 <template>
-  <section class="wrapper">
     <h1>Education</h1>
     <div class="timeline_wrapper">
       <TimelineItem :items="timelineItems" />
     </div>
-    <div class="text">
-      <p>
-        During my engineering studies, I conducted many simulations of physical phenomena using the <strong>Python</strong> language. Throughout master's studies, I mainly use <strong>JavaScript</strong> and <strong>Python</strong>. For individual projects also <strong>R</strong>, <strong>Vue.js</strong> or <strong>React.js</strong>
-      </p>
-    </div>
-  </section>
+
 </template>

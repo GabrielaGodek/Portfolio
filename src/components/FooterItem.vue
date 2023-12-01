@@ -1,20 +1,20 @@
 <template>
   <div class="wrapper">
     <div class="contact_icon">
-      <a href="https://www.linkedin.com/in/gabrielagodek/" aria-label="LinkedIn profile">
-        <font-awesome-icon icon="fa-brands fa-linkedin" size="lg" width="23" hight="23" loading="lazy" style="color: #343837" />
+      <a href="https://www.linkedin.com/in/gabrielagodek/" aria-label="LinkedIn profile" rel="noopener">
+        <font-awesome-icon icon="fa-brands fa-linkedin" size="lg" width="23" height="23" loading="lazy" style="color: #343837" />
         <span class="sr-only">LinkedIn</span>
       </a>
-      <a href="https://github.com/GabrielaGodek" aria-label="GitHub profile">
-        <font-awesome-icon icon="fa-brands fa-github" size="lg" width="23" hight="23" loading="lazy" style="color: #343837" />
+      <a href="https://github.com/GabrielaGodek" aria-label="GitHub profile" rel="noopener">
+        <font-awesome-icon icon="fa-brands fa-github" size="lg" width="23" height="23" loading="lazy" style="color: #343837" />
         <span class="sr-only">GitHub</span>
       </a>
       <a href="mailto:godekgabriela39@gmail.com" aria-label="Send an email">
-        <font-awesome-icon icon="fa-solid fa-envelope-open-text" size="lg" width="23" hight="23" loading="lazy" style="color: #343837" />
+        <font-awesome-icon icon="fa-solid fa-envelope-open-text" size="lg" width="23" height="23" loading="lazy" style="color: #343837" />
         <span class="sr-only">Email</span>
       </a>
       <a href="ENG_GabrielaGodek.pdf" download="" aria-label="Download resume">
-        <font-awesome-icon icon="fa-regular fa-file" size="lg" width="23" hight="23" loading="lazy" style="color: #343837" />
+        <font-awesome-icon icon="fa-regular fa-file" size="lg" width="23" height="23" loading="lazy" style="color: #343837" />
         <span class="sr-only">Resume</span>
       </a>
     </div>
