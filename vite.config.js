@@ -1,8 +1,6 @@
-import { fileURLToPath, URL } from 'node:url'
-
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { fileURLToPath, URL } from 'node:url';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,5 +17,18 @@ export default defineConfig({
         additionalData: `@import "/src/scss/_variables.scss";`
       }
     }
-  }
-})
+  },
+  build: {
+    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Separate third-party libraries into a vendor chunk
+          vendor: /[\\/]node_modules[\\/]/,
+        },
+      },
+    },
+  },
+  
+});
