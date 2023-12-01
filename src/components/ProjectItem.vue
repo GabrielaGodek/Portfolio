@@ -10,7 +10,7 @@ export default {
 <template>
   <div class="project">
     <a class="img_wrapper links" :href="projectDetails.links">
-      <img :src="projectDetails.src" :alt="projectDetails.title" />
+      <img :src="'src/assets/' + projectDetails.image" :alt="projectDetails.title" />
     </a>
     <div class="description">
       <h2>{{ projectDetails.title }}</h2>

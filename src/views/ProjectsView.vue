@@ -13,11 +13,11 @@ export default {
 
     const getData = async () => {
       try {
-        const response = await fetch(`https://portfolio-database-9j2y.onrender.com/api/v1/projects`);
+        const response = await fetch(`/src/assets/db/db.json`);
         const data = await response.json();
 
         if (response.ok) {
-          dataAPI.value = data.data;
+          dataAPI.value = data;
         } else {
           const error = response.status;
           throw error;

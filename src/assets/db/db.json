@@ -1,0 +1,32 @@
+[
+    {   
+        "title":"LazyCup",
+        "tech":"Vue.js, Vite, Vitest, Pinia, Sass",
+        "links":"https://github.com/GabrielaGodek/LazyCup",
+        "image":"lazycup_preview.png"
+    },
+    {   
+        "title":"RESTful API",
+        "tech":"NodeJS + Express, TypeScript, MongoDB + Mongoose, Postman",
+        "links":"https://github.com/GabrielaGodek/RESTful-API",
+        "image":"restful_preview.png"
+    },
+    {   
+        "title":"RSA Encryption",
+        "tech":"Python",
+        "links":"https://github.com/GabrielaGodek/RSA-encryption",
+        "image":"rsa_preview.png"
+    },
+    {   
+        "title":"Gabizaury",
+        "tech":"Phaser.js, JavaScript, Tiled App",
+        "links":"https://github.com/GabrielaGodek/Gabizaury",
+        "image":"gabizaury_preview.png"
+    },
+    {   
+        "title":"Portfolio",
+        "tech":"Vue.js, Vite, Sass",
+        "links":"https://github.com/GabrielaGodek/Portfolio",
+        "image":"portfolio_preview.png"
+    }
+]
