@@ -19,7 +19,7 @@ import { inject } from '@vercel/analytics';
 inject();
 
 import '@/scss/style.css'
-import progressBar from './includes/progressBar'
+import progressBar from '@/includes/progressBar'
 import "nprogress/nprogress.css"
 
 const app = createApp(App)
