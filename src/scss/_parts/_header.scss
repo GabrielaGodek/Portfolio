@@ -1,5 +1,4 @@
 @use '_variables' as *;
-
 @keyframes top {
   0% {
     top: 0;
@@ -16,13 +15,9 @@
 }
 
 @keyframes top-2 {
-  0% {
+  0%, 50% {
     top: 8.5px;
     transform: rotate(45deg);
-  }
-  50% {
-    top: 8.5px;
-    transform: rotate(0deg);
   }
   100% {
     top: 0;
@@ -46,13 +41,9 @@
 }
 
 @keyframes bottom-2 {
-  0% {
+  0%, 50% {
     bottom: 8.5px;
     transform: rotate(135deg);
-  }
-  50% {
-    bottom: 8.5px;
-    transform: rotate(0);
   }
   100% {
     bottom: 0;
@@ -61,25 +52,20 @@
 }
 
 @keyframes scaled {
-  50% {
-    transform: scale(0);
-  }
   100% {
     transform: scale(0);
   }
 }
 
 @keyframes scaled-2 {
-  0% {
-    transform: scale(0);
-  }
-  50% {
+  0%, 50% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
   }
 }
+
 
 header {
   position: absolute;

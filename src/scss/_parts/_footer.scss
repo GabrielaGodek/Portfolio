@@ -1,6 +1,7 @@
 @use '_variables' as *;
 
 footer {
+  min-height: $footer_height;;
   height: $footer_height;
   // height: 100%;
   background-color: $footer_color;

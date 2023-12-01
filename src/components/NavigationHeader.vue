@@ -13,7 +13,7 @@ export default {
 
     const toggleMenu = () => {
       if (window.innerWidth < 1000) {
-        isOpen.value = !isOpen.value;
+        isOpen.value = true;
       }
     };
 
@@ -32,7 +32,13 @@ export default {
     };
 
     onClickOutside(target, (event) => {
-      isOpen.value = false
+      console.log(event.target.outerHTML.includes('span'))
+
+      if(event.target.outerHTML.includes('span')){
+        isOpen.value = !isOpen.value
+      } else {
+        isOpen.value = false
+      }
     })
 
     onMounted(() => {
