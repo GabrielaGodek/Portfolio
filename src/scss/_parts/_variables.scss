@@ -2,19 +2,19 @@ $desktop_breakpoint: 1000px;
 $xs_breakpoint: 435px;
 $md_breakpoint: 800px;
 
-$bg_color: #aaaaaa;
-$header_color: #aaaaaa;
-$details_color: #343837;
+$bg_color: #155e89;
+$header_color: #062c43;
+$details_color: #9ccddc;
 
-$text_color: #141414;
+$text_color: #ced7e0;
 
 $header_height: 50px;
 $footer_height: 132px;
 
 $d_footer_height: 50px;
-$footer_color: #aaaaaa;
+$footer_color: #155e89;
 
-$menu_color: #343837;
+$menu_color: #054569;
 
 $header_padding: 18px;
 
@@ -22,25 +22,25 @@ $open_menu_width: 293px;
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/public/fonts/Montserrat/static/Montserrat-Regular.woff2")
+  src: url("/fonts/Montserrat/static/Montserrat-Regular.woff2")
       format("woff2"),
-    url("/public/fonts/Montserrat/static/Montserrat-Light.woff2")
+    url("/fonts/Montserrat/static/Montserrat-Light.woff2")
       format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/public/fonts/Open_Sans/static/OpenSans-Light.woff2")
+  src: url("/fonts/Open_Sans/static/OpenSans-Light.woff2")
       format("woff2"),
-    url("/public/fonts/Open_Sans/static/OpenSans-ExtraBold.woff2")
+    url("/fonts/Open_Sans/static/OpenSans-ExtraBold.woff2")
       format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans--bold";
-  src: url("/public/fonts/Open_Sans/static/OpenSans-SemiBold.woff2")
+  src: url("/fonts/Open_Sans/static/OpenSans-SemiBold.woff2")
     format("woff2");
   font-display: swap;
 }
@@ -49,3 +49,55 @@ $open_menu_width: 293px;
   $vw: calc($h / ($w / 100)) * 1vw;
   @return $vw;
 }
+
+// header animation
+@keyframes slide-mark-color {
+  0% {
+    color: $text_color;
+  }
+  50% {
+    color: $header_color;
+  }
+  100% {
+    color: $text_color;
+  }
+}
+@keyframes slide-mark {
+  0% {
+    left: 0;
+    right: auto;
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    background-color: $text_color;
+  }
+  100% {
+    left: auto;
+    right: 0;
+    width: 0%;
+  }
+}
+
+// stars animation
+@keyframes animStar {
+  from {
+    transform: translateY(-2000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+// Function to generate multiple box-shadow values for stars
+@function multiple-box-shadow($number_of_stars) {
+  $value: "#{random(2000)}px #{random(2000)}px #FFF"; // Initial shadow
+  @for $i from 2 through $number_of_stars {
+    $value: "#{$value}, #{random(2000)}px #{random(2000)}px #FFF"; // Add more shadows
+  }
+  @return unquote($value); // Return the concatenated value
+}
+
+$shadows-small: multiple-box-shadow(800); // Small stars
+$shadows-medium: multiple-box-shadow(400); // Medium stars
+$shadows-large: multiple-box-shadow(200); // Big stars

@@ -14,7 +14,7 @@ export default {
           date: "Ongoing",
           header: "Master's Degree",
           company: "Applied Informatics",
-          subHeader: "University of Technology at Cracow",
+          subHeader: "University of Economics at Cracow",
           isSubHeader: true,
         },
         {
@@ -32,7 +32,7 @@ export default {
 
 <template>
     <h1>Education</h1>
-    <div class="timeline_wrapper">
+    <div class="timeline-wrapper">
       <TimelineItem :items="timelineItems" />
     </div>
 

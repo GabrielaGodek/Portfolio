@@ -1,82 +1,78 @@
+<script>
+import { ref, onBeforeMount } from 'vue'
+import ContactIcons from '@/components/ContactIcons.vue'
+import ProjectsItem from '@/components/ProjectItem.vue'
+export default {
+  name: 'HomeView',
+  components: {
+    ContactIcons,
+    ProjectsItem,
+  },
+  setup() {
+    
+    const dataAPI = ref([]);
+    const errorMessage = ref('');
+
+    const getData = async () => {
+      try {
+        const response = await fetch(`/db/db.json`);
+        const data = await response.json();
+
+        if (response.ok) {
+          dataAPI.value = data;
+        } else {
+          const error = response.status;
+          throw error;
+        }
+      } catch (error) {
+        console.error(error);
+        errorMessage.value = 'Failed to fetch data';
+      }
+    };
+
+    onBeforeMount(getData);
+
+    return {
+      dataAPI,
+      errorMessage,
+      location
+    };
+  },
+};
+</script>
 <template>
-  <section class="hero view">
-    <div class="avatar">
-      <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
+  <section class="hero-view">
+    <div class="stars">
+      <div class="star star--falling"></div>
+      <div class="star star--small"></div>
+      <div class="star star--medium"></div>
+      <div class="star star--large"></div>
     </div>
     <div class="greeting">
-      <h1>Hello there,<br />I’m Gabriela</h1>
-      <h2 class="header_text">
-        A young, ambitious web developer keen on resolving intricate challenges.
+      <h1 class="greeting__header">Hi, I’m Gabriela</h1>
+
+      <h2 class="greeting__header-text">
+        I’m a<span class="greeting__header-marker">&nbsp;web developer&nbsp;</span>dedicated
+        to delivering innovative solutions
       </h2>
-      <div class="buttons">
-        <router-link to="projects">Project</router-link>
+      <ContactIcons :color="'#ced7e0'"/>
+
+      <div class="greeting__buttons">
+        <router-link to="about">About Me</router-link>
         <router-link to="experience">Experience</router-link>
       </div>
     </div>
   </section>
-  <section class="second view">
-    <div class="avatar">
-      <img width="60" height="60" src="../assets/avatar.svg" alt="Avatar" />
-    </div>
-    <div class="description">
-      <p>
-        My professional aspiration is to attain mastery in <strong>Web Development</strong>,
-        dedicated to crafting aesthetically pleasing and user-friendly solutions
-        that enhance the overall user experience and simplify daily life.
-        Throughout my experience as a web developer and through independent
-        learning, I have come to appreciate the significance of conscientious
-        planning in implementing functionality. With a well-prepared project and
-        a clear understanding of the objectives, project execution becomes
-        seamless, and the resulting code remains clean.
-      </p>
-      <p>
-        My commitment lies in delivering functionalities that are effective and
-        aligned with the specified requirements, accompanied by well-organized
-        and aesthetically pleasing code.
-      </p>
-    </div>
-    <div class="tech">
-      <div class="daily">
-        <h3 class="header">Professionally, I use</h3>
-        <ul>
-          <li>JavaScript (ES6+)</li>
-          <li>CSS3 + SASS</li>
-          <li>Semantic HTML</li>
-        </ul>
-      </div>
-      <div class="additional">
-        <h4 class="header">But I can also use</h4>
-        <ul>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>WordPress</li>
-        </ul>
-      </div>
-      <div class="additional">
-        <h3 class="header">Outside of work I use</h3>
-        <ul>
-          <li>Vue.js 3</li>
-          <li>TypeScript</li>
-          <li>Node.js + Express</li>
-        </ul>
-      </div>
-      <div class="tools">
-        <h3 class="header">Tools</h3>
-        <ul>
-          <li>VS Code</li>
-          <li>Jira</li>
-          <li>Figma</li>
-        </ul>
-      </div>
-      <div class="tools">
-        <h3 class="header">Currently learning</h3>
-        <ul>
-          <li>Vitest + Jest</li>
-          <li>MongoDB + Mongoose</li>
-          <li>Vite + Webpack</li>
-        </ul>
-      </div>
-    </div>
+  <section class="project_wrapper">
+    <h1>Projects</h1>
+      <ProjectsItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
     
   </section>
 </template>
+
+<style scoped>
+.contact_icon {
+ display: flex;
+ justify-content: space-evenly;
+}
+</style>

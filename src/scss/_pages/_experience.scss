@@ -5,7 +5,7 @@
   flex-direction: column;
   margin: auto;
   padding: 20px;
-  .timeline_wrapper {
+  .timeline-wrapper {
     margin: 50px 0;
     display: flex;
     gap: 20px;
@@ -25,7 +25,7 @@
     h1 {
       flex-basis: 100%;
     }
-    .timeline_wrapper {
+    .timeline-wrapper {
       flex-basis: 50%;
       justify-content: center;
     }

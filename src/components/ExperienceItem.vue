@@ -32,7 +32,7 @@ export default {
 
 <template>
     <h1>Experience</h1>
-    <div class="timeline_wrapper">
+    <div class="timeline-wrapper">
       <TimelineItem :items="timelineItems" />
     </div>
 </template>

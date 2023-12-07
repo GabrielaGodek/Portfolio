@@ -1,84 +1,159 @@
 @use "../_parts/variables" as *;
 
-.hero {
+.hero-view {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  // overflow: auto;
-  .avatar {
-    justify-content: flex-end;
-    margin-bottom: 70px;
-  }
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    $header_color 15%,
+    $menu_color 69%,
+    $bg_color 100%
+  );
 
+  .stars {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    .star {
+      border-radius: 50%;
+      position: relative;
+      &.star--falling {
+        position: absolute;
+        left: 40%;
+        width: 6px;
+        height: 6px;
+        background: linear-gradient(-45deg, #fff, rgba(0, 0, 255, 0));
+        border-radius: 999px;
+        filter: drop-shadow(0 0 6px #fff);
+        animation: tail 5s ease-in-out infinite forwards, falling 5s ease-in-out infinite forwards;
+        animation-delay: 2s;
+        transform-origin: right top;
+        transform: rotate(45deg);
+      }
+      @keyframes tail {
+        0% {
+          width: 0;
+        }
+
+        30% {
+          width: 100px;
+        }
+
+        100% {
+          width: 200px;
+        }
+      }
+
+      @keyframes falling {
+        0% {
+          transform: rotate(45deg) translate(0);
+        }
+
+        100% {
+          transform: rotate(45deg) translate(100vw, 20vh);
+        }
+      }
+
+      &.star--small {
+        width: 1px;
+        height: 1px;
+        box-shadow: $shadows-small;
+        animation: animStar 50s linear infinite;
+        &::after {
+          box-shadow: $shadows-small;
+        }
+      }
+      &.star--medium {
+        width: 2px;
+        height: 2px;
+        box-shadow: $shadows-medium;
+        animation: animStar 100s linear infinite;
+        &::after {
+          box-shadow: $shadows-medium;
+        }
+      }
+      &.star--large {
+        width: 3px;
+        height: 3px;
+        box-shadow: $shadows-large;
+        animation: animStar 150s linear infinite;
+        &::after {
+          box-shadow: $shadows-large;
+        }
+      }
+    }
+  }
   .greeting {
     padding: vw(410, 49) 0;
     display: flex;
     flex-direction: column;
     gap: vw(410, 65);
-    h1 {
+    .greeting__header {
       width: 100%;
       text-align: left;
     }
-    h2 {
+    .greeting__header-text {
       font-family: "Open Sans", sans-serif;
       font-size: 18px;
       letter-spacing: 0.027px;
+      .greeting__header-marker {
+        position: relative;
+        animation: slide-mark-color 2s ease-in-out;
+        font-family: "OpenSans--bold", sans-serif;
+        z-index: 4;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 25px;
+          border-radius: 4px;
+          // background-color: $details_color;
+          animation: slide-mark 2s ease-in-out;
+          z-index: -1;
+        }
+      }
     }
   }
-  @media(min-width: $desktop_breakpoint){
-    .avatar{
-      margin-bottom: 0;
-    }
+  @media (min-width: $desktop_breakpoint) {
     .greeting {
-     padding: vw(1920, 49) 0;
-     gap: vw(1920, 65);
+      padding: vw(1920, 49) 0;
+      gap: vw(1920, 65);
     }
-   }
-}
-.second {
-  // gap: 20px;
-  // padding-bottom: vw();
-  .avatar {
-    justify-content: flex-end;
-    transform: scaleX(-1);
   }
+}
+
+.second-view {
   p {
     font-size: 14px;
     text-align: justify;
   }
 }
 
-.avatar {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  img {
-    width: 60px;
-  }
-}
-p {
-  text-align: left;
-}
-
-.buttons {
+.greeting__buttons {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   padding-bottom: 60px;
+  z-index: 99;
   a {
     display: block;
     min-width: 132px;
     text-decoration: none;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid $details_color;
+    border: 1px solid $header_color;
     font-size: 16px;
     padding: 5px 20px;
-    background-color: $details_color;
-    color: $bg_color;
+    background-color: $header_color;
+    color: $text_color;
     &:hover {
       color: $details_color;
       background-color: $bg_color;
@@ -116,10 +191,9 @@ p {
     div {
       flex: 1 1 30%;
       text-align: center;
-      
     }
   }
-  .header {
+  .tech__header {
     padding: 30px 0 10px 0;
     font-size: 20px;
     font-weight: 600;
@@ -133,12 +207,11 @@ p {
 }
 
 @media (min-width: $md_breakpoint) {
-  .header_text,
-  h2 {
+  .greeting__header-text {
     align-self: center;
     width: 314px;
   }
-  .buttons {
+  .greeting__buttons {
     justify-content: space-between;
     width: 314px;
   }

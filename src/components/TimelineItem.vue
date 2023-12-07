@@ -12,14 +12,14 @@ export default {
 
 <template>
   <div class="timeline">
-    <span class="line"></span>
+    <span class="timeline__line"></span>
     <template v-for="(item, index) in items" :key="index">
-      <p class="date">{{ item.date }}</p>
-      <span class="event"></span>
-      <div class="details">
-        <h2 class="title">{{ item.header }}</h2>
-        <h3 class="additional" v-show="item.isSubHeader">{{ item.subHeader }}</h3>
-        <h4 class="company">{{ item.company }}</h4>
+      <p class="timeline__date">{{ item.date }}</p>
+      <span class="timeline__event"></span>
+      <div class="timeline__details">
+        <h2 class="timeline__title">{{ item.header }}</h2>
+        <h3 class="timeline__additional" v-show="item.isSubHeader">{{ item.subHeader }}</h3>
+        <h4 class="timeline__company">{{ item.company }}</h4>
       </div>
     </template>
   </div>
@@ -32,15 +32,15 @@ export default {
   max-width: 360px;
   /* margin: 0 auto; */
 }
-.line {
+.timeline__line {
   left: 80px;
   transform: translate(-50%, 0);
   position: absolute;
   height: 100%;
   width: 10px;
-  background-color: #343837;
+  background-color: #062c43;
 }
-  .line:after {
+  .timeline__line:after {
     content: '';
     display: block;
     position: absolute;
@@ -51,48 +51,48 @@ export default {
     height: 0px;
     border-style: solid;
     border-width: 0 12.5px 25px 12.5px;
-    border-color: transparent transparent #343837 transparent;
+    border-color: transparent transparent #062c43 transparent;
   }
 
-.event {
+.timeline__event {
   left: 80px;
   transform: translate(-50%, 0);
   position: absolute;
   width: 25px;
   height: 25px;
-  background-color: #AAAAAA;
-  border: 6px solid #343837;
+  background-color: #155e89;
+  border: 6px solid #062c43;
   border-radius: 50%;
 }
-  .event:after {
+  .timeline__event:after {
     position: absolute;
     left: 30px;
     top: 50%;
     transform: translate(0, -50%);
   }
-  .event:before {
+  .timeline__event:before {
     position: absolute;
     right: 30px;
   }
-  .event:nth-of-type(3) {
+  .timeline__event:nth-of-type(3) {
     bottom: 50px;
   }
-  .event:nth-of-type(2) {
+  .timeline__event:nth-of-type(2) {
     top: 50px;
   }
 
-.date {
+.timeline__date {
   position: absolute;
   font-size: 14px;
 }
-  .date:nth-of-type(1) {
+  .timeline__date:nth-of-type(1) {
     top: 52px;
   }
-  .date:nth-of-type(2) {
+  .timeline__date:nth-of-type(2) {
     bottom: 54px;
   }
 
-.details {
+.timeline__details {
   position: absolute;
   text-align: left;
 }
@@ -101,21 +101,21 @@ export default {
     text-align: left;
     padding: 0;
   }
-  .company {
+  .timeline__company {
     font-size: 13px;
   }
-  .additional {
+  .timeline__additional {
     font-style: italic;
     font-size: 14px;
   }
-  .title {
+  .timeline__title {
     font-size: 16px;
   }
-  .details:nth-of-type(1) {
+  .timeline__details:nth-of-type(1) {
     top: 38px;
     left: 110px;
   }
-  .details:nth-of-type(2) {
+  .timeline__details:nth-of-type(2) {
     bottom: 44px;
     left: 110px;
   }
