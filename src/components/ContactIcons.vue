@@ -64,6 +64,9 @@ export default {
 </template>
 
 <style scoped>
+.contact_icon {
+  z-index: 9999;
+}
 .sr-only {
   position: absolute;
   width: 1px;
