@@ -11,7 +11,7 @@ export default {
     return {
       timelineItems: ref([
         {
-          date: "10.2023",
+          date: "11.2022",
           header: "Junior Web Developer",
           company: "Marketing Investment Group",
           subHeader: "",
