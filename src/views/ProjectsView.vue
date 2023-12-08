@@ -1,11 +1,14 @@
 <script>
 import { ref, onBeforeMount } from 'vue';
+import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
+
 import ProjectsItem from '@/components/ProjectItem.vue';
 
 export default {
   name: 'ProjectPage',
   components: {
     ProjectsItem,
+    ScrollParallax
   },
   setup() {
     const dataAPI = ref([]);

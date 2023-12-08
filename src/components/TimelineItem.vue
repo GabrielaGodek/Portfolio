@@ -28,9 +28,9 @@ export default {
 <style scoped>
 .timeline {
   position: relative;
-  /* width: 80vw; */
+  width: 80vw;
   max-width: 360px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 .timeline__line {
   left: 80px;

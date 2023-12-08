@@ -1,5 +1,6 @@
 @use "../_parts/variables" as *;
 .project_wrapper {
+  
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   justify-items: center;
@@ -15,7 +16,6 @@
   }
 
   .project {
-    // flex-basis: 33%;
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -31,10 +31,20 @@
     .project__img-wrapper {
       width: 300px;
       height: 300px;
+      overflow: hidden;
       background-color: $details_color;
       img {
         width: 100%;
         padding: 5px;
+        transform: scale(1);
+        filter:grayscale(30%);
+        transition: transform 0.1s ease-in-out;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+          filter:grayscale(0%);
+        }
       }
     }
     .project__description {

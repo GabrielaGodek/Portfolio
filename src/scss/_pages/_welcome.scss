@@ -66,7 +66,7 @@
         width: 1px;
         height: 1px;
         box-shadow: $shadows-small;
-        animation: animStar 50s linear infinite;
+        animation: animStar 50s linear infinite reverse;
         &::after {
           box-shadow: $shadows-small;
         }
@@ -84,7 +84,7 @@
         width: 3px;
         height: 3px;
         box-shadow: $shadows-large;
-        animation: animStar 150s linear infinite;
+        animation: animStar 150s linear infinite reverse;
         &::after {
           box-shadow: $shadows-large;
         }
