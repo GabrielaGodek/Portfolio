@@ -42,9 +42,11 @@ export default {
 </script>
 
 <template>
-  <section class="project_wrapper">
+  <section class="projects_wrapper">
     <h1>Projects</h1>
+    <div class="scroll_wrapper">
       <ProjectsItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
+    </div>
     
   </section>
 </template>

@@ -43,7 +43,7 @@ export default {
 };
 </script>
 <template>
-  <scroll-parallax :down="true" direction="y" :speed="0.5">
+  <!-- <scroll-parallax :down="true" direction="y" :speed="0.5"> -->
   <section class="hero-view">
       <div class="stars">
         <div class="star star--falling"></div>
@@ -66,20 +66,18 @@ export default {
         </div>
       </div>
     </section>
-  </scroll-parallax>
-  <section class="project_wrapper ">
+  <!-- </scroll-parallax> -->
+  <section class="projects_wrapper ">
     <!-- <scroll-parallax direction="y"> -->
       <h1>Projects</h1>
-      
-      <!-- <scroll-parallax> -->
-        <ProjectsItem
+      <div class="scroll_wrapper">
+          <ProjectsItem
           v-for="(item, index) in dataAPI"
           :key="item.id"
           :index="index"
           :projectDetails="item"
-        />
-      <!-- </scroll-parallax> -->
-    <!-- </scroll-parallax> -->
+          />
+        </div>
   </section>
 </template>
 

@@ -18,10 +18,28 @@
         "image":"rsa_preview.png"
     },
     {   
+        "title":"Form Validation",
+        "tech":"TypeScript, Tailwind.css",
+        "links":"https://github.com/GabrielaGodek/FormValidation",
+        "image":"formvalid_preview.png"
+    },
+    {   
         "title":"Gabizaury",
         "tech":"Phaser.js, JavaScript, Tiled App",
         "links":"https://github.com/GabrielaGodek/Gabizaury",
         "image":"gabizaury_preview.png"
+    },
+    {   
+        "title":"EasyMail",
+        "tech":"PHP, PHPMailer, Bootstrap",
+        "links":"https://github.com/GabrielaGodek/EasyMail",
+        "image":"easymail_preview.png"
+    },
+    {   
+        "title":"Snake",
+        "tech":"React, Tailwindcss",
+        "links":"https://github.com/GabrielaGodek/snake",
+        "image":"snake_preview.png"
     },
     {   
         "title":"Portfolio",
