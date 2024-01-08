@@ -1,0 +1,12 @@
+@use "../_parts/variables" as *;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - $header_height - $footer_height);
+  flex: 1;
+  h1 {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}

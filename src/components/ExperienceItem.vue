@@ -11,14 +11,14 @@ export default {
     return {
       timelineItems: ref([
         {
-          date: "11.2022",
+          date: "11.22 - 10.23",
           header: "Junior Web Developer",
           company: "Marketing Investment Group",
           subHeader: "",
           isSubHeader: false,
         },
         {
-          date: "03.2022",
+          date: "03.22 - 11.22",
           header: "Assistant Web Developer",
           company: "Marketing Investment Group",
           subHeader: "",

@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <!-- <scroll-parallax :right="index % 2 === 0 ? true : false" :left="index % 2 !== 0 ? true : false"  direction="x"> -->
+  
     <div class="project">
       <a class="project__img-wrapper links" :href="projectDetails.links">
         <img
@@ -23,12 +23,11 @@ export default {
         />
       </a>
       <div class="project__description">
-        <h2 class="project__header">{{ projectDetails.title }}</h2>
-        <h3 class="project__tech">{{ projectDetails.tech }}</h3>
+        <h3 class="project__header">{{ projectDetails.title }}</h3>
+        <h4 class="project__tech">{{ projectDetails.tech }}</h4>
         <a :href="projectDetails.links" class="project__links links"
           >Click for code
         </a>
       </div>
     </div>
-  <!-- </scroll-parallax> -->
 </template>

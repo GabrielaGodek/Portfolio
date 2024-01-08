@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .contact_icon {
-  z-index: 9999;
+  z-index: 99;
 }
 .sr-only {
   position: absolute;

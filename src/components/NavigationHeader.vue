@@ -11,7 +11,7 @@ export default {
     const target = ref(null);
 
     const headerColors = {
-      "/": "#062c43",
+      "/": "#030035",
     };
     const scrollUp = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -86,7 +86,8 @@ export default {
           icon="fa-solid fa-laptop-code"
           size="lg"
           style="color: #ced7e0"
-        />&nbsp;|&nbsp;GG
+        />
+        &nbsp;|&nbsp;GG
       </div>
       <div class="header__menu-icon">
         <span></span>

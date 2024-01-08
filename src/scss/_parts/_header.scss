@@ -93,6 +93,7 @@ header {
       font-weight: bold;
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
+      color: $text_color;
     }
  
     .header__menu-icon {
@@ -142,6 +143,7 @@ header {
 
     &.open {
       max-width: $open_menu_width;
+      z-index: 999;
       // height: 100vh;
       & + .header-wrapper {
         .header__menu-icon {

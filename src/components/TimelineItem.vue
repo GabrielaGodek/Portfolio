@@ -33,7 +33,7 @@ export default {
   margin: 0 auto;
 }
 .timeline__line {
-  left: 80px;
+  left: 120px;
   transform: translate(-50%, 0);
   position: absolute;
   height: 100%;
@@ -55,7 +55,7 @@ export default {
   }
 
 .timeline__event {
-  left: 80px;
+  left: 120px;
   transform: translate(-50%, 0);
   position: absolute;
   width: 25px;
@@ -113,11 +113,11 @@ export default {
   }
   .timeline__details:nth-of-type(1) {
     top: 38px;
-    left: 110px;
+    left: 160px;
   }
   .timeline__details:nth-of-type(2) {
     bottom: 44px;
-    left: 110px;
+    left: 160px;
   }
 
 </style>

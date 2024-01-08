@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="about">
       <h1>About me</h1>
       <div class="description">
         <p>
@@ -55,9 +55,9 @@
         <div class="tools">
           <h3 class="tech__header">Currently learning</h3>
           <ul>
-            <li>Vitest + Jest</li>
+            <li>Vitest / Jest</li>
             <li>MongoDB + Mongoose</li>
-            <li>Vite + Webpack</li>
+            <li>Vite / Webpack</li>
           </ul>
         </div>
       </div>

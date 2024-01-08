@@ -11,14 +11,14 @@ export default {
     return {
       timelineItems: ref([
         {
-          date: "Ongoing",
+          date: "10.22 - ongoing",
           header: "Master's Degree",
           company: "Applied Informatics",
           subHeader: "University of Economics at Cracow",
           isSubHeader: true,
         },
         {
-          date: "02.2022",
+          date: "2018 - 02.22",
           header: "Bachelor's Degree",
           company: "Physics",
           subHeader: "University of Technology at Cracow",

@@ -100,11 +100,13 @@
     .greeting__header {
       width: 100%;
       text-align: left;
+      color: $text_color;
     }
     .greeting__header-text {
       font-family: "Open Sans", sans-serif;
       font-size: 18px;
       letter-spacing: 0.027px;
+      color: $text_color;
       .greeting__header-marker {
         position: relative;
         animation: slide-mark-color 2s ease-in-out;
