@@ -1,19 +1,22 @@
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+
+export default defineComponent({
   name: 'TimeLine',
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<Array<any>>,
       required: true,
     },
   },
-};
+});
 </script>
+
 
 <template>
   <div class="timeline">
     <span class="timeline__line"></span>
-    <template v-for="(item, index) in items" :key="index">
+    <template v-for="(item) in items" :key="item.header">
       <p class="timeline__date">{{ item.date }}</p>
       <span class="timeline__event"></span>
       <div class="timeline__details">

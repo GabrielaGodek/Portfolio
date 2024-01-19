@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import ProjectsTemp from "@/components/ProjectsTemp.vue";
-export default {
+export default defineComponent({
   name: 'ProjectPage',
   components: {
     ProjectsTemp
   },
 
-};
+})
 </script>
 
 <template>

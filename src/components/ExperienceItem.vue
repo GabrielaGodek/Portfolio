@@ -1,38 +1,47 @@
-<script>
-import { ref } from "vue";
+<script lang="ts">
+import { ref, defineComponent } from "vue";
 import TimelineItem from "@/components/TimelineItem.vue";
+import { TimeLineItem } from '@/includes/interfaces'
 
-export default {
+// interface TimeLineItem {
+//   date: string;
+//   header: string;
+//   company: string;
+//   subHeader: string;
+//   isSubHeader: boolean;
+// }
+export default defineComponent({
   name: "ExperienceItem",
   components: {
     TimelineItem,
   },
-  data() {
+  setup(){
+    const timelineItem = ref<TimeLineItem[]>([
+      {
+        date: "11.22 - 10.23",
+        header: "Junior Web Developer",
+        company: "Marketing Investment Group",
+        subHeader: "",
+        isSubHeader: false,
+      },
+      {
+        date: "03.22 - 11.22",
+        header: "Assistant Web Developer",
+        company: "Marketing Investment Group",
+        subHeader: "",
+        isSubHeader: false,
+      }
+    ])
     return {
-      timelineItems: ref([
-        {
-          date: "11.22 - 10.23",
-          header: "Junior Web Developer",
-          company: "Marketing Investment Group",
-          subHeader: "",
-          isSubHeader: false,
-        },
-        {
-          date: "03.22 - 11.22",
-          header: "Assistant Web Developer",
-          company: "Marketing Investment Group",
-          subHeader: "",
-          isSubHeader: false,
-        },
-      ]),
-    };
-  },
-};
+      timelineItem
+    }
+  }
+})
 </script>
 
 <template>
     <h1>Experience</h1>
     <div class="timeline-wrapper">
-      <TimelineItem :items="timelineItems" />
+      <TimelineItem :items="timelineItem" />
     </div>
 </template>

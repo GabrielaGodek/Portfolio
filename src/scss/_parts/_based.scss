@@ -9,7 +9,6 @@ body * {
 body {
   background-color: $bg_color_second;
   flex-grow: 1;
-  // height: 100lvh;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -25,7 +24,6 @@ strong {
 }
 section {
   padding: 50px 23px 20px;
-  // height: 100svh;
 }
 
 

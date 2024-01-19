@@ -1,18 +1,25 @@
-<script>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+<script lang="ts">
+import { ref, onMounted, onBeforeUnmount, defineComponent } from "vue";
+import { useRoute } from "vue-router";
 import { onClickOutside } from "@vueuse/core";
+// import type { OnClickOutsideOptions } from '@vueuse/core'
 
-export default {
+export default defineComponent({
   name: "headerItem",
   setup() {
     const isOpen = ref(false);
     const currentPos = ref(0);
     const scrollingUp = ref(false);
-    const target = ref(null);
+    const target = ref<HTMLElement | null>(null);
+    const route = useRoute();
 
-    const headerColors = {
+    const headerColors: Record<string, string> = {
       "/": "#030035",
+      "/experience": "#062c43",
+      "/projects": "#054569",
+      "/about": "#054569",
     };
+
     const scrollUp = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
@@ -29,8 +36,10 @@ export default {
     const closeMenu = () => {
       isOpen.value = false;
     };
+
     onClickOutside(target, (event) => {
-      if (event.target.outerHTML.includes("span")) {
+      const clickedElement = event.target as HTMLElement;
+      if (clickedElement.outerHTML.includes("span")) {
         isOpen.value = !isOpen.value;
       } else {
         isOpen.value = false;
@@ -40,10 +49,11 @@ export default {
     onMounted(() => {
       currentPos.value = window.scrollY;
       document.addEventListener("scroll", handleScroll);
-    }),
-      onBeforeUnmount(() => {
-        document.removeEventListener("scroll", handleScroll);
-      });
+    });
+
+    onBeforeUnmount(() => {
+      document.removeEventListener("scroll", handleScroll);
+    });
 
     return {
       isOpen,
@@ -51,26 +61,25 @@ export default {
       scrollingUp,
       target,
       headerColors,
-      closeMenu
+      closeMenu,
+      route
     };
   },
-};
+})
 </script>
 
+
+
+
 <template>
-  <header
-    :class="{ 'header--scroll': scrollingUp }"
-    :style="{ backgroundColor: headerColors[$route.path] }"
-  >
+  <header :class="{ 'header--scroll': scrollingUp }" :style="{ backgroundColor: headerColors[route.path] }">
     <nav class="navigation" :class="{ open: isOpen }" ref="target">
       <ul>
         <li class="navigation__item" title="home">
-          <router-link :to="{ name: 'home' }" @click="closeMenu"
-            >Home</router-link
-          >
+          <router-link :to="{ name: 'home' }" @click="closeMenu">Home</router-link>
         </li>
         <li class="navigation__item" title="experience">
-          <router-link :to="{ name: 'experience' } " @click="closeMenu">Experience</router-link>
+          <router-link :to="{ name: 'experience' }" @click="closeMenu">Experience</router-link>
         </li>
         <li class="navigation__item" title="projects">
           <router-link :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
@@ -82,11 +91,7 @@ export default {
     </nav>
     <div class="header-wrapper">
       <div class="header__logo" @click="scrollUp">
-        <font-awesome-icon
-          icon="fa-solid fa-laptop-code"
-          size="lg"
-          style="color: #ced7e0"
-        />
+        <font-awesome-icon icon="fa-solid fa-laptop-code" size="lg" style="color: #ced7e0" />
         &nbsp;|&nbsp;GG
       </div>
       <div class="header__menu-icon">
