@@ -1,0 +1,1 @@
+import{P as o}from"./ProjectsTemp-Rl1Yiz9x.js";import{d as t,_ as s,c,e as n,f as r,h as p}from"./vendor-y6hibt0b.js";const a=t({name:"ProjectPage",components:{ProjectsTemp:o}}),_={class:"projects_wrapper"};function m(f,i,d,j,l,P){const e=c("projects-temp");return n(),r("section",_,[p(e)])}const h=s(a,[["render",m]]);export{h as default};
