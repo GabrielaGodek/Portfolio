@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, defineComponent } from "vue";
 import { useRoute } from "vue-router";
 import { onClickOutside } from "@vueuse/core";
+// import type { OnClickOutsideOptions } from '@vueuse/core'
 
 export default defineComponent({
   name: "headerItem",
@@ -32,7 +33,6 @@ export default defineComponent({
       }
       currentPos.value = scrollPos;
     };
-
     const closeMenu = () => {
       isOpen.value = false;
     };
@@ -54,7 +54,6 @@ export default defineComponent({
     onBeforeUnmount(() => {
       document.removeEventListener("scroll", handleScroll);
     });
-    console.log(headerColors[route.path])
 
     return {
       isOpen,
@@ -73,19 +72,14 @@ export default defineComponent({
 
 
 <template>
-  <header
-    :class="{ 'header--scroll': scrollingUp }"
-    :style="{ backgroundColor: headerColors[route.path] }"
-  >
+  <header :class="{ 'header--scroll': scrollingUp }" :style="{ backgroundColor: headerColors[route.path] }">
     <nav class="navigation" :class="{ open: isOpen }" ref="target">
       <ul>
         <li class="navigation__item" title="home">
-          <router-link :to="{ name: 'home' }" @click="closeMenu"
-            >Home</router-link
-          >
+          <router-link :to="{ name: 'home' }" @click="closeMenu">Home</router-link>
         </li>
         <li class="navigation__item" title="experience">
-          <router-link :to="{ name: 'experience' } " @click="closeMenu">Experience</router-link>
+          <router-link :to="{ name: 'experience' }" @click="closeMenu">Experience</router-link>
         </li>
         <li class="navigation__item" title="projects">
           <router-link :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
@@ -97,11 +91,7 @@ export default defineComponent({
     </nav>
     <div class="header-wrapper">
       <div class="header__logo" @click="scrollUp">
-        <font-awesome-icon
-          icon="fa-solid fa-laptop-code"
-          size="lg"
-          style="color: #ced7e0"
-        />
+        <font-awesome-icon icon="fa-solid fa-laptop-code" size="lg" style="color: #ced7e0" />
         &nbsp;|&nbsp;GG
       </div>
       <div class="header__menu-icon">

@@ -13,6 +13,7 @@ interface TimeLineItem {
     subHeader: string;
     isSubHeader: boolean;
 }
+
 export type {
     ProjectData, TimeLineItem
 }

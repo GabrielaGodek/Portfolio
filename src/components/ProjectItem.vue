@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, PropType, defineProps } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 import { ProjectData } from '@/includes/interfaces';
 
@@ -14,7 +14,7 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props) {
+  setup() {
     return {};
   }
 });

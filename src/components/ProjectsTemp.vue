@@ -1,5 +1,5 @@
 <script lang="ts">
-import { ref, onBeforeMount, onMounted, defineComponent } from "vue";
+import { ref, onBeforeMount, defineComponent } from "vue";
 import ProjectItem from "@/components/ProjectItem.vue";
 import { ProjectData } from '@/includes/interfaces'
 
