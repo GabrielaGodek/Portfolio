@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import App from '@/App.vue'
+import router from '@/router'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
 
 import vueClickOutsideElement from 'vue-click-outside-element'
