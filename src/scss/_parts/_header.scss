@@ -83,10 +83,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: $header_height;
-    // background-color: $bg_color;
     padding: 9px $header_padding 9px $header_padding;
     .header__logo {
-      // max-width: 61px;
       display: flex;
       justify-content: center;
       align-items: center;

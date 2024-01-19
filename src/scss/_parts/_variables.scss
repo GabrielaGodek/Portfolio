@@ -22,6 +22,8 @@ $header_padding: 18px;
 
 $open_menu_width: 293px;
 
+$min_page_height:  calc(100vh - $header_height - $footer_height);
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat/static/Montserrat-Regular.woff2")

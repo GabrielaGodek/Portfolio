@@ -44,7 +44,7 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.contact_icon {
+.contact-icon {
   display: flex;
   justify-content: space-evenly;
 }

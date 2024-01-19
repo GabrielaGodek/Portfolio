@@ -3,13 +3,6 @@ import { ref, defineComponent } from "vue";
 import TimelineItem from "@/components/TimelineItem.vue";
 import { TimeLineItem } from '@/includes/interfaces'
 
-// interface TimeLineItem {
-//   date: string;
-//   header: string;
-//   company: string;
-//   subHeader: string;
-//   isSubHeader: boolean;
-// }
 export default defineComponent({
   name: "ExperienceItem",
   components: {

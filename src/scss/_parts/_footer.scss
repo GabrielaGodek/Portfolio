@@ -1,14 +1,9 @@
-@use '_variables' as *;
+@use "_variables" as *;
 
 footer {
-  min-height: $footer_height;;
+  min-height: $footer_height;
   height: $footer_height;
-  // height: 100%;
   background-color: $footer_color;
-  position: relative;
-  @media (min-width: $desktop_breakpoint) {
-    max-height: $d_footer_height;
-  }
   .wrapper {
     padding: 6px 48px;
     height: 100%;
@@ -16,9 +11,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    //  width: 100%;
-    //  position: relative;
-    .contact_icon {
+    .contact-icon {
       display: flex;
       width: 74px;
       height: 76px;
@@ -31,36 +24,35 @@ footer {
       a {
         flex: 1 1 50%;
       }
-
-      @media (min-width: $desktop_breakpoint) {
-        & {
-          flex-direction: row;
-          align-items: center;
-          max-width: 268px;
-          width: 100%;
-          height: unset;
-          a {
-            flex: 1 1 25%;
-          }
-        }
-      }
     }
-
     .signature__name {
       font-size: 19px;
       text-align: right;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 300;
       color: $text_color;
       .signature__name--hide {
         display: block;
         max-height: 0;
-        @media (min-width: $desktop_breakpoint) {
-          & {
-            display: none;
-          }
-        }
       }
+    }
+  }
+}
+@media (min-width: $desktop_breakpoint) {
+  footer {
+    max-height: $d_footer_height;
+    .wrapper .contact-icon {
+      flex-direction: row;
+      align-items: center;
+      max-width: 268px;
+      width: 100%;
+      height: unset;
+      a {
+        flex: 1 1 25%;
+      }
+    }
+    .wrapper .signature__name .signature__name--hide {
+      display: none;
     }
   }
 }

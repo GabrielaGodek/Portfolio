@@ -18,6 +18,11 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid $details_color;
   border-radius: 5px;
 }
+main {
+  min-height: $min_page_height;
+  display: flex;
+  flex-direction: column;
+}
 strong {
   font-family: "OpenSans--bold", sans-serif;
   font-weight: 600;
@@ -25,7 +30,6 @@ strong {
 section {
   padding: 50px 23px 20px;
 }
-
 
 h1,
 h2 {

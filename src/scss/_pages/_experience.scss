@@ -5,8 +5,8 @@
   flex-direction: column;
   margin: auto;
   padding: 20px;
+  flex:1;
   &.education {
-    background: rgb(250, 250, 250);
     background: linear-gradient(
       180deg,
       rgba(250, 250, 250, 1) 13%,
@@ -27,9 +27,18 @@
       flex: 1 1 50%;
     }
   }
-  @media (min-width: $desktop_breakpoint) {
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.08px;
+    text-align: justify;
+  }
+}
+@media (min-width: $desktop_breakpoint) {
+  .wrapper {
+    flex-direction: row-reverse;
     padding: 50px;
-    flex-direction: row;
     flex-wrap: wrap;
     h1 {
       flex-basis: 100%;
@@ -42,17 +51,5 @@
       flex-basis: 50%;
       margin: auto;
     }
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.08px;
-    text-align: justify;
-  }
-}
-@media (min-width: $desktop_breakpoint) {
-  .wrapper {
-    flex-direction: row-reverse;
   }
 }
