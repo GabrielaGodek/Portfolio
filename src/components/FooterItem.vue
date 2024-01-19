@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import ContactIcons from "@/components/ContactIcons.vue";
-export default {
+export default defineComponent({
   name: 'footerItem',
   components: {
     ContactIcons
   }
-}
+})
 </script>
 <template>
   <div class="wrapper">

@@ -1,12 +1,24 @@
 @use "../_parts/variables" as *;
 
 .about {
+  color: $text_color;
   display: flex;
   flex-direction: column;
   height: calc(100vh - $header_height - $footer_height);
   flex: 1;
+  background: rgb(5, 69, 105);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 69, 105, 1) 29%,
+    rgba(85, 145, 169, 1) 82%,
+    rgba(3, 0, 53, 1) 100%
+  );
   h1 {
+    color: $text_color;
     text-align: center;
     padding-bottom: 40px;
+  }
+  p, .tech .tech__header, .tech ul{
+    color: $text_color;
   }
 }

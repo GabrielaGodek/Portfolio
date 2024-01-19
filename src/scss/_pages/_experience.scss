@@ -1,10 +1,19 @@
-@use '../_parts/variables' as *;
+@use "../_parts/variables" as *;
 
 .wrapper {
   display: flex;
   flex-direction: column;
   margin: auto;
   padding: 20px;
+  &.education {
+    background: rgb(250, 250, 250);
+    background: linear-gradient(
+      180deg,
+      rgba(250, 250, 250, 1) 13%,
+      rgba(85, 145, 169, 1) 59%,
+      rgba(3, 0, 53, 1) 100%
+    );
+  }
   .timeline-wrapper {
     margin: 50px 0;
     display: flex;

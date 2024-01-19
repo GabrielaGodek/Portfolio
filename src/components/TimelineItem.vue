@@ -1,14 +1,17 @@
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+
+export default defineComponent({
   name: 'TimeLine',
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<Array<any>>,
       required: true,
     },
   },
-};
+});
 </script>
+
 
 <template>
   <div class="timeline">

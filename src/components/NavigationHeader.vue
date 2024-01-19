@@ -1,18 +1,24 @@
-<script>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+<script lang="ts">
+import { ref, onMounted, onBeforeUnmount, defineComponent } from "vue";
+import { useRoute } from "vue-router";
 import { onClickOutside } from "@vueuse/core";
 
-export default {
+export default defineComponent({
   name: "headerItem",
   setup() {
     const isOpen = ref(false);
     const currentPos = ref(0);
     const scrollingUp = ref(false);
-    const target = ref(null);
+    const target = ref<HTMLElement | null>(null);
+    const route = useRoute();
 
-    const headerColors = {
+    const headerColors: Record<string, string> = {
       "/": "#030035",
+      "/experience": "#062c43",
+      "/projects": "#054569",
+      "/about": "#054569",
     };
+
     const scrollUp = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
@@ -26,11 +32,14 @@ export default {
       }
       currentPos.value = scrollPos;
     };
+
     const closeMenu = () => {
       isOpen.value = false;
     };
+
     onClickOutside(target, (event) => {
-      if (event.target.outerHTML.includes("span")) {
+      const clickedElement = event.target as HTMLElement;
+      if (clickedElement.outerHTML.includes("span")) {
         isOpen.value = !isOpen.value;
       } else {
         isOpen.value = false;
@@ -40,10 +49,12 @@ export default {
     onMounted(() => {
       currentPos.value = window.scrollY;
       document.addEventListener("scroll", handleScroll);
-    }),
-      onBeforeUnmount(() => {
-        document.removeEventListener("scroll", handleScroll);
-      });
+    });
+
+    onBeforeUnmount(() => {
+      document.removeEventListener("scroll", handleScroll);
+    });
+    console.log(headerColors[route.path])
 
     return {
       isOpen,
@@ -51,16 +62,20 @@ export default {
       scrollingUp,
       target,
       headerColors,
-      closeMenu
+      closeMenu,
+      route
     };
   },
-};
+})
 </script>
+
+
+
 
 <template>
   <header
     :class="{ 'header--scroll': scrollingUp }"
-    :style="{ backgroundColor: headerColors[$route.path] }"
+    :style="{ backgroundColor: headerColors[route.path] }"
   >
     <nav class="navigation" :class="{ open: isOpen }" ref="target">
       <ul>

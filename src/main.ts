@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-// import VueRellax from 'vue-rellax'
-// import VueParallaxJs from 'vue-parallax-js'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
 
 import vueClickOutsideElement from 'vue-click-outside-element'
@@ -23,8 +21,6 @@ library.add(faGithub, faLinkedin, faEnvelopeOpenText, faFile, faLaptopCode)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.use(router)
-// app.use(VueRellax)
-// app.use(VueParallaxJs)
 app.component('scroll-parallax', ScrollParallax);
 nprogressBar(router)
 app.use(vueClickOutsideElement)

@@ -1,11 +1,10 @@
-<script>
-import { ref, onBeforeMount, onMounted } from "vue";
+<script lang="ts">
+import { defineComponent } from 'vue'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
-
 import ContactIcons from "@/components/ContactIcons.vue";
-// import ProjectsItem from "@/components/ProjectItem.vue";
 import ProjectsTemp from "@/components/ProjectsTemp.vue";
-export default {
+
+export default defineComponent({
   name: "HomeView",
   components: {
     ScrollParallax,
@@ -13,7 +12,7 @@ export default {
     ProjectsTemp,
   },
 
-};
+})
 </script>
 <template>
   <section class="hero-view">

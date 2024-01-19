@@ -1,19 +1,15 @@
-<script>
-import { ref, onBeforeMount, onMounted } from "vue";
-// import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
+<script lang="ts">
+import { ref, onBeforeMount, onMounted, defineComponent } from "vue";
+import ProjectItem from "@/components/ProjectItem.vue";
+import { ProjectData } from '@/includes/interfaces'
 
-// import ContactIcons from "@/components/ContactIcons.vue";
-import ProjectsItem from "@/components/ProjectItem.vue";
-
-export default {
+export default defineComponent({
     name: "ProjectsTemp",
     components: {
-        // ScrollParallax,
-        // ContactIcons,
-        ProjectsItem,
+        ProjectItem
     },
     setup() {
-        const dataAPI = ref([]);
+        const dataAPI = ref<ProjectData[]>([]);
         const errorMessage = ref("");
 
         const getData = async () => {
@@ -34,18 +30,17 @@ export default {
         };
 
         onBeforeMount(getData);
-
         return {
             dataAPI,
             errorMessage
         };
     },
-};
+})
 </script>
 <template>
     <h1>Skills Development</h1>
     <h2>Personal and Academic Projects</h2>
     <div class="scroll_wrapper">
-        <ProjectsItem v-for="(item, index) in dataAPI" :key="item.id" :index="index" :projectDetails="item" />
+        <ProjectItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
     </div>
 </template>
