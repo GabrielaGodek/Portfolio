@@ -101,3 +101,15 @@
     }
   }
 }
+@media (min-width: $xl_breakpoint) {
+  .projects_wrapper {
+    .scroll_wrapper {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      .project {
+        &:nth-child(odd) {
+        margin-top: 0px;
+      }
+      }
+    }
+  }
+}

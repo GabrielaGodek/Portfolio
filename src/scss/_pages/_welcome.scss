@@ -34,7 +34,8 @@
         background: linear-gradient(-45deg, #fff, rgba(0, 0, 255, 0));
         border-radius: 999px;
         filter: drop-shadow(0 0 6px #fff);
-        animation: tail 5s ease-in-out infinite forwards, falling 5s ease-in-out infinite forwards;
+        animation: tail 5s ease-in-out infinite forwards,
+          falling 5s ease-in-out infinite forwards;
         animation-delay: 2s;
         transform-origin: right top;
         transform: rotate(45deg);
@@ -147,67 +148,36 @@
   padding-bottom: 60px;
   z-index: 99;
   a {
+    position: relative;
     display: block;
-    min-width: 132px;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid $header_color;
-    font-size: 16px;
-    padding: 5px 20px;
-    background-color: $header_color;
     color: $text_color;
-    &:hover {
-      color: $details_color;
-      background-color: $bg_color;
-      border-color: $details_color;
+    text-decoration: none;
+    border: 2px solid $bg_color;
+    padding: 5px 20px;
+    overflow: hidden;
+    transition: 1s all ease;
+    &::before {
+      background: $bg_color;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      transition: all 0.6s ease;
+    }
+
+    &::before {
+      width: 0%;
+      height: 100%;
+    }
+
+    &:hover::before {
+      width: 100%;
     }
   }
 }
 
-.description {
-  margin: 70px 0;
-  max-width: vw(317, 390);
-  width: 100%;
-  @media (min-width: $desktop_breakpoint) {
-    max-width: 60vw;
-    margin: 0 auto;
-    p {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-}
-.tech {
-  max-width: vw(317, 390);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media (min-width: $desktop_breakpoint) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 60vw;
-    margin: 0 auto;
-    div {
-      flex: 1 1 30%;
-      text-align: center;
-    }
-  }
-  .tech__header {
-    padding: 30px 0 10px 0;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-  }
-  ul {
-    list-style: none;
-    font-size: 14px;
-  }
-}
 
 @media (min-width: $md_breakpoint) {
   .greeting__header-text {
