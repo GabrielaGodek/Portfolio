@@ -34,22 +34,23 @@ footer {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: end;
-      // flex: 50%;
+      width: 100%;
+      align-items: end; 
       gap: 96px;
       .contact__header {
         font-size: 88px;
         line-height: 0.92em;
-        
+        flex-basis: calc(50% - 48px);
       }
       .contact__text {
         font-size: 20px;
         line-height: 1.6em;
-        flex: 50%;
+        flex-basis: 450px;
         text-align: right;
+        margin-right: 0;
       }
       .contact__icons {
-        flex: 1;
+        flex-basis: 100%;
       }
     }
   }

@@ -66,26 +66,26 @@ export default defineComponent({
 
 <template>
   <header :class="{ 'header--scroll': scrollingUp }">
-  <!-- <header :class="{ 'header--scroll': scrollingUp }" :style="{ backgroundColor: headerColors[route.path] }"> -->
     <nav class="navigation" :class="{ open: isOpen }" ref="target">
       <ul>
-        <!-- <li class="navigation__item" title="home">
-          <router-link :to="{ name: 'home' }" @click="closeMenu">Home</router-link>
-        </li> -->
         <li class="navigation__item" title="experience">
-          <router-link :to="{ name: 'experience' }" @click="closeMenu">Experience</router-link>
+          <router-link class="navigation__item-link" :to="{ name: 'experience' }"
+            @click="closeMenu">Experience</router-link>
+          <router-link class="navigation__item-link" :to="{ name: 'experience' }"
+            @click="closeMenu">Experience</router-link>
         </li>
         <li class="navigation__item" title="projects">
-          <router-link :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
+          <router-link class="navigation__item-link" :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
+          <router-link class="navigation__item-link" :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
         </li>
-        <!-- <li class="navigation__item" title="about">
-          <router-link :to="{ name: 'about' }" @click="closeMenu">About</router-link>
-        </li> -->
       </ul>
     </nav>
     <div class="header-wrapper">
-      <div class="header__logo" @click="scrollUp">
-        <router-link :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela Godek</router-link>
+      <div class="header__logo navigation__item" @click="scrollUp">
+        <router-link class="navigation__item-link" :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela
+          Godek</router-link>
+        <router-link class="navigation__item-link" :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela
+          Godek</router-link>
       </div>
       <div class="header__menu-icon">
         <span></span>
@@ -93,11 +93,4 @@ export default defineComponent({
         <span></span>
       </div>
     </div>
-  </header>
-</template>
-
-<style scoped>
-.header--home {
-  background-color: #062c43;
-}
-</style>
+</header></template>

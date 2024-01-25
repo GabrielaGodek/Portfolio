@@ -15,7 +15,6 @@ export default defineComponent({
     const rotatedText = ref('');
     const textToRotate = ref('Gabriela Godek - Web Developer -');
     onMounted(() => {
-      // const textElement = document.querySelector('.hero__greeting__image-text');
       if (textToRotate.value) {
 
         rotatedText.value = textToRotate.value
@@ -34,7 +33,15 @@ export default defineComponent({
 <template>
   <section class="hero">
     <div class="hero__greeting">
-      <h1 class="hero__greeting__header">Crafting effective features, consistent investigation into innovative technologies.</h1>
+      <h1 class="hero__greeting__header">
+        <span>Crafting&nbsp;</span>
+        <span>effective&nbsp;</span>
+        <span>features,&nbsp;</span> 
+        <span>consistent&nbsp;</span>
+        <span>exploring&nbsp;</span>
+        <span>innovative&nbsp;</span>
+        <span>technologies.</span>
+      </h1>
         <h2 class="hero__greeting__header-text">
           I am enthusiastic about web development, just diving into the world of blockchain, and fueled by coffee ☕️. I am
           coding my own path.

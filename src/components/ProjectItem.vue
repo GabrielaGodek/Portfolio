@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="project">
+  <div v-motion-fade-visible class="project">
     <a class="project__img-links" :href="projectDetails.links">
       <img :src="'/projects_images/' + projectDetails.image" :alt="projectDetails.title" />
     </a>

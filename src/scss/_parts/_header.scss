@@ -1,4 +1,4 @@
-@use '_variables' as *;
+@use "_variables" as *;
 @keyframes top {
   0% {
     top: 0;
@@ -15,7 +15,8 @@
 }
 
 @keyframes top-2 {
-  0%, 50% {
+  0%,
+  50% {
     top: 8.5px;
     transform: rotate(45deg);
   }
@@ -41,7 +42,8 @@
 }
 
 @keyframes bottom-2 {
-  0%, 50% {
+  0%,
+  50% {
     bottom: 8.5px;
     transform: rotate(135deg);
   }
@@ -58,14 +60,14 @@
 }
 
 @keyframes scaled-2 {
-  0%, 50% {
+  0%,
+  50% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
   }
 }
-
 
 header {
   position: absolute;
@@ -75,7 +77,25 @@ header {
   background-color: $bg_color;
   z-index: 998;
 
-
+  .navigation__item {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    .navigation__item-link {
+      display: block;
+      margin: 0px 30px;
+      height: 100%;
+      position: relative;
+      top: 0%;
+      transition: 0.3s;
+    }
+    &:hover .navigation__item-link{
+      top:-100%;
+    }
+  }
   .header-wrapper {
     z-index: 99;
     position: relative;
@@ -89,16 +109,16 @@ header {
       justify-content: center;
       align-items: center;
       a {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         color: $text_color;
         text-decoration: none;
         &.router-link-active {
-            text-decoration: underline;
-          }
+          text-decoration: underline;
+        }
       }
     }
- 
+
     .header__menu-icon {
       position: relative;
       width: 32px;
@@ -176,7 +196,7 @@ header {
       width: 100%;
       li {
         // color: #000;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-size: 26px;
         margin: auto 0;
         a {
@@ -189,14 +209,14 @@ header {
             color: $bg_color;
           }
         }
-        @media(min-width: $desktop_breakpoint) {
+        @media (min-width: $desktop_breakpoint) {
           font-size: 18px;
         }
       }
     }
   }
 
-  &.header--scroll{
+  &.header--scroll {
     position: fixed;
     top: 0;
     left: 0;
@@ -204,9 +224,12 @@ header {
   }
   // desktop
   @media (min-width: $desktop_breakpoint) {
-      .header-wrapper {
-        padding: 25px 80px 24px 80px;
+    .header-wrapper {
+      padding: 25px 80px 24px 80px;
+      .header__logo {
+        font-size: 24px;
       }
+    }
     nav {
       // position: relative;
       top: 0;

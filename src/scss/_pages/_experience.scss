@@ -1,9 +1,16 @@
 @use "../_parts/variables" as *;
 
-.experience__header, .education__header {
+.experience__header,
+.education__header {
   font-size: 30px;
   line-height: 1.4em;
   font-weight: 600;
+  display: inline-block;
+  opacity: 0;
+  animation: slideIn;
+  animation-duration: 1s;
+  transform: translateY(100%);
+  animation-fill-mode: forwards;
 }
 .experience__text-header {
   font-size: 20px;
@@ -54,7 +61,8 @@
 }
 
 @media (min-width: $desktop_breakpoint) {
-  .experience__header,.education__header {
+  .experience__header,
+  .education__header {
     flex-basis: 100%;
     font-size: 48px;
     line-height: 1.4em;

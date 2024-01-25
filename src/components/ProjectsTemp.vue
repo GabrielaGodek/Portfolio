@@ -46,8 +46,10 @@ export default defineComponent({
 })
 </script>
 <template>
-    <h1 class="projects__header">Skills Development</h1>
-    <h2 class="projects__subheader" v-if="isProjectPage">Personal and academic projects</h2>
+    <h1 v-motion-slide-visible-once-bottom class="projects__header">Skills Development
+    </h1>
+
+    <h2 v-motion-slide-visible-once-bottom class="projects__subheader" v-if="isProjectPage">Personal and academic projects</h2>
     <div class="projects__list">
         <ProjectItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
     </div>

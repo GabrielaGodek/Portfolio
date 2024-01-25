@@ -6,6 +6,7 @@
     font-weight: 800;
     text-align: center;
     margin: 20px 0;
+    font-size: 54px;
   }
   
   .projects__list {
@@ -20,6 +21,7 @@
         max-width: 500px;
         max-height: 500px;
         overflow: hidden;
+        margin: 0 auto;
         img {
           width: 100%;
           // padding: 5px;
@@ -37,7 +39,8 @@
         }
       }
       .project__description {
-        margin: 0;
+        // margin: 0;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         color: $text_color_dark;
@@ -79,6 +82,9 @@
         .project__img-links {
           max-width: 560px;
           max-height: 560px;
+        }
+        .project__description {
+          margin: 0;
         }
       }
     }

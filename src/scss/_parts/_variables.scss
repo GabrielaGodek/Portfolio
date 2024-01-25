@@ -3,13 +3,13 @@ $desktop_breakpoint: 1000px;
 $xs_breakpoint: 435px;
 $md_breakpoint: 800px;
 
-$bg_color: #0C0C0C;
-$bg_color_second: #F4E7D4;
+$bg_color: #0c0c0c;
+$bg_color_second: #f4e7d4;
 $header_color: #030035;
 $details_color: #321051;
 
-$text_color: #F4E7D4;
-$text_color_dark: #0C0C0C;
+$text_color: #f4e7d4;
+$text_color_dark: #0c0c0c;
 
 $header_height: 97px;
 $footer_height: 132px;
@@ -23,30 +23,25 @@ $header_padding: 18px;
 
 $open_menu_width: 293px;
 
-$min_page_height:  calc(100vh - $header_height - $footer_height);
+$min_page_height: calc(100vh - $header_height - $footer_height);
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/static/Montserrat-Regular.woff2")
-      format("woff2"),
-    url("/fonts/Montserrat/static/Montserrat-Light.woff2")
-      format("woff2");
+  src: url("/fonts/Montserrat/static/Montserrat-Regular.woff2") format("woff2"),
+    url("/fonts/Montserrat/static/Montserrat-Light.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/Open_Sans/static/OpenSans-Light.woff2")
-      format("woff2"),
-    url("/fonts/Open_Sans/static/OpenSans-ExtraBold.woff2")
-      format("woff2");
+  src: url("/fonts/Open_Sans/static/OpenSans-Light.woff2") format("woff2"),
+    url("/fonts/Open_Sans/static/OpenSans-ExtraBold.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans--bold";
-  src: url("/fonts/Open_Sans/static/OpenSans-SemiBold.woff2")
-    format("woff2");
+  src: url("/fonts/Open_Sans/static/OpenSans-SemiBold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -55,54 +50,14 @@ $min_page_height:  calc(100vh - $header_height - $footer_height);
   @return $vw;
 }
 
-// header animation
-@keyframes slide-mark-color {
-  0% {
-    color: $text_color;
-  }
-  50% {
-    color: $header_color;
-  }
+@keyframes slideIn {
   100% {
-    color: $text_color;
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
-@keyframes slide-mark {
-  0% {
-    left: 0;
-    right: auto;
-    width: 0%;
+  @keyframes rotateText {
+    0% {
+      transform: rotate(-360deg);
+    }
   }
-  50% {
-    width: 100%;
-    background-color: $text_color;
-  }
-  100% {
-    left: auto;
-    right: 0;
-    width: 0%;
-  }
-}
-
-// stars animation
-@keyframes animStar {
-  from {
-    transform: translateY(-2000px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-
-// // Function to generate multiple box-shadow values for stars
-// @function multiple-box-shadow($number_of_stars) {
-//   $value: "#{random(2000)}px #{random(2000)}px #FFF"; // Initial shadow
-//   @for $i from 2 through $number_of_stars {
-//     $value: "#{$value}, #{random(2000)}px #{random(2000)}px #FFF"; // Add more shadows
-//   }
-//   @return unquote($value); // Return the concatenated value
-// }
-
-// $shadows-small: multiple-box-shadow(800); // Small stars
-// $shadows-medium: multiple-box-shadow(400); // Medium stars
-// $shadows-large: multiple-box-shadow(200); // Big stars

@@ -16,7 +16,7 @@ export default defineComponent({
   <navigation-header />
   <div class="relative_header"></div>
 
-  <main class="main_wrapper">
+  <main class="main">
     <router-view></router-view>
   </main>
 
