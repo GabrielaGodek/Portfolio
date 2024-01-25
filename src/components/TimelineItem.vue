@@ -40,8 +40,8 @@ export default defineComponent({
   transform: translate(-50%, 0);
   position: absolute;
   height: 100%;
-  width: 10px;
-  background-color: #062c43;
+  width: 5px;
+  background-color: #F4E7D4;
 }
   .timeline__line:after {
     content: '';
@@ -53,18 +53,17 @@ export default defineComponent({
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 12.5px 25px 12.5px;
-    border-color: transparent transparent #062c43 transparent;
+    border-width: 0 8.5px 20px 8.5px;
+    border-color: transparent transparent #F4E7D4 transparent;
   }
 
 .timeline__event {
   left: 120px;
   transform: translate(-50%, 0);
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: #155e89;
-  border: 6px solid #062c43;
+  width: 18px;
+  height: 18px;
+  background-color: #F4E7D4;
   border-radius: 50%;
 }
   .timeline__event:after {
@@ -105,21 +104,22 @@ export default defineComponent({
     padding: 0;
   }
   .timeline__company {
-    font-size: 13px;
+    font-size: 12px;
+    font-style: italic;
   }
   .timeline__additional {
-    font-style: italic;
-    font-size: 14px;
+    font-size: 10px;
   }
   .timeline__title {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
   }
   .timeline__details:nth-of-type(1) {
-    top: 38px;
+    top: 28px;
     left: 160px;
   }
   .timeline__details:nth-of-type(2) {
-    bottom: 44px;
+    bottom: 28px;
     left: 160px;
   }
 

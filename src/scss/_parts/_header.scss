@@ -75,6 +75,7 @@ header {
   background-color: $bg_color;
   z-index: 998;
 
+
   .header-wrapper {
     z-index: 99;
     position: relative;
@@ -83,15 +84,19 @@ header {
     justify-content: space-between;
     align-items: center;
     height: $header_height;
-    padding: 9px $header_padding 9px $header_padding;
+    padding: 25px 20px 24px 20px;
     .header__logo {
-      display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      color: $text_color;
+      a {
+        font-size: 24px;
+        font-weight: 400;
+        color: $text_color;
+        text-decoration: none;
+        &.router-link-active {
+            text-decoration: underline;
+          }
+      }
     }
  
     .header__menu-icon {
@@ -199,13 +204,16 @@ header {
   }
   // desktop
   @media (min-width: $desktop_breakpoint) {
+      .header-wrapper {
+        padding: 25px 80px 24px 80px;
+      }
     nav {
       // position: relative;
       top: 0;
       max-width: 50%;
       max-height: $header_height;
       background-color: transparent;
-      padding: 0 $header_padding 0 0;
+      padding: 25px 80px 24px 80px;
       ul {
         padding: 0;
         flex-direction: row;

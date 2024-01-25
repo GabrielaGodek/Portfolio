@@ -15,51 +15,37 @@ export default defineComponent({
 })
 </script>
 <template>
-  <scroll-parallax :down="true" direction="y" :speed="0.5">
-    <section class="wrapper">
-      <Experience />
-      <div class="text">
-        <p>
-          In my role as a <strong>Web Developer</strong>, my primary
-          responsibilities revolved around creating, implementing, and maintaining
-          features using <strong>PHP</strong>, <strong>JinJava</strong> and
-          <strong>JavaScript</strong>, alongside open-source libraries such as
-          <strong>jQuery</strong>. I also mastered coding campaign landing pages
-          based on projects designed in <strong>Figma</strong>,
-          <strong>Adobe XD</strong>, or <strong>Adobe Photoshop</strong>.
-          <br />
-          A noteworthy achievement includes my
-          <strong>
-            significant contribution to the successful implementation
-          </strong>
-          of a new e-commerce website. Throughout this long-term project, I took
-          on a<strong> mentoring role, guiding and supporting</strong> new members
-          of the team. I conducted <strong>onboarding trainings</strong> for the
-          newest members of the team.
-        </p>
-        <p>
-          At present, I am actively engaged in mastering
-          <strong>TypeScript</strong> and <strong>Node.js</strong>, including
-          <strong>Express</strong>, and refining my proficiency in
-          <strong>unit testing</strong> with <strong>Jest</strong> and
-          <strong>Vitest</strong>, with a strong dedication to
-          <strong>frontend development</strong>. This pursuit is complemented by
-          my exploration of <strong>MongoDB</strong> with
-          <strong>Mongoose</strong>, further broadening my skill set.
-          Additionally, I am delving into the realms of Mobile and Web Design.
-        </p>
-        <p>
-          I believe that this comprehensive knowledge will not only facilitate
-          improved communication among teams but also significantly contribute to
-          the primary objective of enhancing overall team growth and performance.
-        </p>
-      </div>
-    </section>
-  </scroll-parallax>
-  <section class="wrapper education">
+  <!-- <scroll-parallax :down="true" direction="y" :speed="0.5"> -->
+  <section class="experience">
+    <Experience />
+    <div class="experience__text">
+      <p class="experience__text-paragraph">
+        As a <strong>Web Developer</strong>, I was actively involved in creating, implementing, and maintaining
+        features using <strong>PHP</strong>, <strong>JinJava</strong>, and <strong>JavaScript</strong>, along with
+        open-source libraries such as <strong>jQuery</strong>.
+      </p>
+      <h4 class="experience__text-header">Additionally, I:</h4>
+      <ul class="experience__text-list">
+        <li>Executed coding based on projects from <strong>Figma</strong>, <strong>Adobe XD</strong>, or <strong>Adobe Photoshop</strong>.</li>
+        <li>Played a pivotal role in the successful launch of a new e-commerce platform</li>
+        <li><strong>Mentored and provided support</strong> to new team members</li>
+        <li>Conducted onboarding <strong>training sessions</strong></li>
+      </ul>
+      <h4 class="experience__text-header">Currently, I am:</h4>
+      <ul class="experience__text-list">
+        <li>Actively pursuing knowledge in <strong>TypeScript</strong> and <strong>Node.js, specifically Express</strong></li>
+        <li>Improving skills in unit testing with <strong>Jest</strong> and <strong>Vitest</strong></li>
+        <li><strong>Focusing on fullstack development</strong> with an emphasis on the frontend</li>
+        <li>Expanding expertise in <strong>MongoDB with Mongoose</strong> and <strong>MySQL</strong></li>
+      </ul>
+
+    </div>
+  </section>
+  <!-- </scroll-parallax> -->
+  <section class="education">
     <Education />
-    <div class="text">
-      <p>
+    <div class="education__text">
+      <p class="education__text-paragraph">
         During my engineering studies, I conducted many simulations of physical
         phenomena using the <strong>Python</strong> language. Throughout
         master's studies, I mainly use <strong>JavaScript</strong> and

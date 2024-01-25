@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
 import ContactIcons from "@/components/ContactIcons.vue";
 import ProjectsTemp from "@/components/ProjectsTemp.vue";
@@ -11,34 +11,46 @@ export default defineComponent({
     ContactIcons,
     ProjectsTemp,
   },
+  setup() {
+    const rotatedText = ref('');
+    const textToRotate = ref('Gabriela Godek - Web Developer -');
+    onMounted(() => {
+      // const textElement = document.querySelector('.hero__greeting__image-text');
+      if (textToRotate.value) {
+
+        rotatedText.value = textToRotate.value
+          .split('')
+          .map((char, i) => `<span style="transform:rotate(${i * 11}deg)">${char}</span>`)
+          .join('');
+      }
+    });
+    return {
+      rotatedText
+    }
+  }
 
 })
 </script>
 <template>
-  <section class="hero-view">
-    <div class="stars">
-      <div class="star star--falling"></div>
-      <div class="star star--small"></div>
-      <div class="star star--medium"></div>
-      <div class="star star--large"></div>
-    </div>
+  <section class="hero">
+    <div class="hero__greeting">
+      <h1 class="hero__greeting__header">Crafting effective features, consistent investigation into innovative technologies.</h1>
+        <h2 class="hero__greeting__header-text">
+          I am enthusiastic about web development, just diving into the world of blockchain, and fueled by coffee ☕️. I am
+          coding my own path.
+          Let's connect and delve into the fascinating realm of technology!
+        </h2>
+        <div class="hero__greeting__image">
+          <div class="hero__greeting__image-logo"></div>
+          <div class="hero__greeting__image-text">
+            <span v-html="rotatedText"></span>
+          </div>
 
-    <div class="greeting">
-      <h1 class="greeting__header">Hi, I’m Gabriela</h1>
-      <h2 class="greeting__header-text">
-        I’m a<span class="greeting__header-marker">&nbsp;web developer&nbsp;</span>dedicated to delivering innovative
-        solutions
-      </h2>
-      <ContactIcons :color="'#ced7e0'" />
-      <div class="greeting__buttons">
-        <router-link to="about">About Me</router-link>
-        <router-link to="experience">Experience</router-link>
-      </div>
+        </div>
     </div>
   </section>
 
-  <section class="projects_wrapper ">
-
+  <section class="projects">
     <projects-temp></projects-temp>
   </section>
 </template>
@@ -49,3 +61,4 @@ export default defineComponent({
   justify-content: space-evenly;
 }
 </style>
+

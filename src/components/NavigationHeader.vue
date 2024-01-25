@@ -13,13 +13,6 @@ export default defineComponent({
     const target = ref<HTMLElement | null>(null);
     const route = useRoute();
 
-    const headerColors: Record<string, string> = {
-      "/": "#030035",
-      "/experience": "#062c43",
-      "/projects": "#054569",
-      "/about": "#054569",
-    };
-
     const scrollUp = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
@@ -60,7 +53,7 @@ export default defineComponent({
       scrollUp,
       scrollingUp,
       target,
-      headerColors,
+      // headerColors,
       closeMenu,
       route
     };
@@ -72,27 +65,27 @@ export default defineComponent({
 
 
 <template>
-  <header :class="{ 'header--scroll': scrollingUp }" :style="{ backgroundColor: headerColors[route.path] }">
+  <header :class="{ 'header--scroll': scrollingUp }">
+  <!-- <header :class="{ 'header--scroll': scrollingUp }" :style="{ backgroundColor: headerColors[route.path] }"> -->
     <nav class="navigation" :class="{ open: isOpen }" ref="target">
       <ul>
-        <li class="navigation__item" title="home">
+        <!-- <li class="navigation__item" title="home">
           <router-link :to="{ name: 'home' }" @click="closeMenu">Home</router-link>
-        </li>
+        </li> -->
         <li class="navigation__item" title="experience">
           <router-link :to="{ name: 'experience' }" @click="closeMenu">Experience</router-link>
         </li>
         <li class="navigation__item" title="projects">
           <router-link :to="{ name: 'projects' }" @click="closeMenu">Projects</router-link>
         </li>
-        <li class="navigation__item" title="about">
+        <!-- <li class="navigation__item" title="about">
           <router-link :to="{ name: 'about' }" @click="closeMenu">About</router-link>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <div class="header-wrapper">
       <div class="header__logo" @click="scrollUp">
-        <font-awesome-icon icon="fa-solid fa-laptop-code" size="lg" style="color: #ced7e0" />
-        &nbsp;|&nbsp;GG
+        <router-link :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela Godek</router-link>
       </div>
       <div class="header__menu-icon">
         <span></span>

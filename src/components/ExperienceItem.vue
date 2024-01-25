@@ -33,7 +33,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <h1>Experience</h1>
+    <h3 class="experience__header">Experience</h3>
     <div class="timeline-wrapper">
       <TimelineItem :items="timelineItem" />
     </div>

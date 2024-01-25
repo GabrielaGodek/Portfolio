@@ -12,44 +12,38 @@ export default defineComponent({
 })
 </script>
 <template>
-  <div class="contact-icon">
-    <a href="https://www.linkedin.com/in/gabrielagodek/" aria-label="LinkedIn profile" rel="noopener" class="contact-icon__link">
-      <font-awesome-icon icon="fa-brands fa-linkedin" size="lg" width="75" height="75" loading="lazy"
+    <a href="https://www.linkedin.com/in/gabrielagodek/" aria-label="LinkedIn profile" rel="noopener" class="contact__icons__link">
+      <font-awesome-icon icon="fa-brands fa-linkedin" size="xl" width="75" height="75" loading="lazy"
         :style="{ color: color }" />
-      <span class="contact-icon__label">LinkedIn</span>
+      <span class="contact__icons__label">LinkedIn</span>
     </a>
-    <a href="https://github.com/GabrielaGodek" aria-label="GitHub profile" rel="noopener" class="contact-icon__link">
-      <font-awesome-icon icon="fa-brands fa-github" size="lg" width="75" height="75" loading="lazy"
+    <a href="https://github.com/GabrielaGodek" aria-label="GitHub profile" rel="noopener" class="contact__icons__link">
+      <font-awesome-icon icon="fa-brands fa-github" size="xl" width="75" height="75" loading="lazy"
         :style="{ color: color }" />
-      <span class="contact-icon__label">GitHub</span>
+      <span class="contact__icons__label">GitHub</span>
     </a>
     <a href="mailto:godekgabriela39@gmail.com" aria-label="Send an email">
-      <font-awesome-icon icon="fa-solid fa-envelope-open-text" size="lg" width="75" height="75" loading="lazy" class="contact-icon__link"
+      <font-awesome-icon icon="fa-solid fa-envelope-open-text" size="xl" width="75" height="75" loading="lazy" class="contact__icons__link"
         :style="{ color: color }" />
-      <span class="contact-icon__label">Email</span>
+      <span class="contact__icons__label">Email</span>
     </a>
-    <a href="GabrielaGodek_ENG.pdf" download="" aria-label="Download resume" class="contact-icon__link">
-      <font-awesome-icon icon="fa-regular fa-file" size="lg" width="75" height="75" loading="lazy"
+    <a href="GabrielaGodek_ENG.pdf" download="" aria-label="Download resume" class="contact__icons__link">
+      <font-awesome-icon icon="fa-regular fa-file" size="xl" width="75" height="75" loading="lazy"
         :style="{ color: color }" />
-      <span class="contact-icon__label">Resume</span>
+      <span class="contact__icons__label">Resume</span>
     </a>
-  </div>
 </template>
 
 <style scoped>
-.contact-icon {
-  z-index: 99;
-  padding: 10px 0;
-  position: relative;
-}
-.contact-icon__link {
+
+.contact__icons__link {
   transition: transform .3s ease;
 }
-.contact-icon__link:hover {
+.contact__icons__link:hover {
   transform: translateY(-5px);
 }
 
-.contact-icon__label{
+.contact__icons__label{
   position: absolute;
   width: 1px;
   height: 1px;

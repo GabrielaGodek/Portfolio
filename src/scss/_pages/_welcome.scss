@@ -1,191 +1,99 @@
 @use "../_parts/variables" as *;
 
-.hero-view {
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   position: relative;
   height: 100vh;
-  background: linear-gradient(
-    180deg,
-    $header_color 15%,
-    $menu_color 69%,
-    $bg_color 100%
-  );
 
-  .stars {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-    overflow: hidden;
-    .star {
-      border-radius: 50%;
-      position: relative;
-      &.star--falling {
-        position: absolute;
-        left: 40%;
-        width: 6px;
-        height: 6px;
-        background: linear-gradient(-45deg, #fff, rgba(0, 0, 255, 0));
-        border-radius: 999px;
-        filter: drop-shadow(0 0 6px #fff);
-        animation: tail 5s ease-in-out infinite forwards,
-          falling 5s ease-in-out infinite forwards;
-        animation-delay: 2s;
-        transform-origin: right top;
-        transform: rotate(45deg);
-      }
-      @keyframes tail {
-        0% {
-          width: 0;
-        }
-
-        30% {
-          width: 100px;
-        }
-
-        100% {
-          width: 200px;
-        }
-      }
-
-      @keyframes falling {
-        0% {
-          transform: rotate(45deg) translate(0);
-        }
-
-        100% {
-          transform: rotate(45deg) translate(100vw, 20vh);
-        }
-      }
-
-      &.star--small {
-        width: 1px;
-        height: 1px;
-        box-shadow: $shadows-small;
-        animation: animStar 50s linear infinite reverse;
-        &::after {
-          box-shadow: $shadows-small;
-        }
-      }
-      &.star--medium {
-        width: 2px;
-        height: 2px;
-        box-shadow: $shadows-medium;
-        animation: animStar 100s linear infinite;
-        &::after {
-          box-shadow: $shadows-medium;
-        }
-      }
-      &.star--large {
-        width: 3px;
-        height: 3px;
-        box-shadow: $shadows-large;
-        animation: animStar 150s linear infinite reverse;
-        &::after {
-          box-shadow: $shadows-large;
-        }
-      }
-    }
-  }
-  .greeting {
-    padding: vw(410, 49) 0;
+  .hero__greeting {
     display: flex;
-    flex-direction: column;
-    gap: vw(410, 65);
-    .greeting__header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    .hero__greeting__header {
+      order: 1;
       width: 100%;
+      font-size: 34px;
+      line-height: 1.15em;
+      text-align: left;
+      color: $text_color;
+      font-weight: 500;
+    }
+    .hero__greeting__header-text {
+      font-size: 16px;
+      order: 2;
+      line-height: 1.6em;
       text-align: left;
       color: $text_color;
     }
-    .greeting__header-text {
-      font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      letter-spacing: 0.027px;
-      color: $text_color;
-      .greeting__header-marker {
-        position: relative;
-        animation: slide-mark-color 2s ease-in-out;
-        font-family: "OpenSans--bold", sans-serif;
-        z-index: 4;
-        &::before {
-          content: "";
+    .hero__greeting__image {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      order: 3;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      .hero__greeting__image-logo {
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: url("/public/profile_png.png");
+        background-size: cover;
+        border-radius: 50%;
+      }
+      .hero__greeting__image-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: rotateText 10s linear infinite;
+        // animation-delay: 5s;
+        span {
+          color: $text_color;
           position: absolute;
-          height: 25px;
-          border-radius: 4px;
-          // background-color: $details_color;
-          animation: slide-mark 2s ease-in-out;
-          z-index: -1;
+          left: 50%;
+          font-size: 18px;
+          font-weight: 600;
+          transform-origin: 0 100px;
         }
       }
     }
   }
-  @media (min-width: $desktop_breakpoint) {
-    .greeting {
-      padding: vw(1920, 49) 0;
-      gap: vw(1920, 65);
+  @keyframes rotateText {
+    0% {
+      transform: rotate(-360deg);
     }
   }
 }
-
-.second-view {
-  p {
-    font-size: 14px;
-    text-align: justify;
-  }
-}
-
-.greeting__buttons {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding-bottom: 60px;
-  z-index: 99;
-  a {
-    position: relative;
-    display: block;
-    color: $text_color;
-    text-decoration: none;
-    border: 2px solid $bg_color;
-    padding: 5px 20px;
-    overflow: hidden;
-    transition: 1s all ease;
-    &::before {
-      background: $bg_color;
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      transition: all 0.6s ease;
-    }
-
-    &::before {
-      width: 0%;
-      height: 100%;
-    }
-
-    &:hover::before {
-      width: 100%;
-    }
-  }
-}
-
 
 @media (min-width: $md_breakpoint) {
-  .greeting__header-text {
-    align-self: center;
-    width: 314px;
-  }
-  .greeting__buttons {
-    justify-content: space-between;
-    width: 314px;
+  .hero {
+    // height: 55vh;
+    .hero__greeting {
+      .hero__greeting__header-text {
+        order: 3;
+        align-self: end;
+        width: 50%;
+        font-size: 20px;
+      }
+      .hero__greeting__header {
+        order: 1;
+        font-size: 72px;
+      }
+      .hero__greeting__image {
+        margin-left: 20%;
+        order: 2;
+      }
+    }
   }
 }

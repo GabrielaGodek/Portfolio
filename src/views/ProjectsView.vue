@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="projects_wrapper">
+  <section class="projects">
     <projects-temp></projects-temp>
   </section>
 </template>

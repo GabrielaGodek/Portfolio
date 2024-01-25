@@ -9,10 +9,13 @@ export default defineComponent({
 })
 </script>
 <template>
-  <div class="wrapper">
-    <ContactIcons :color="'#ced7e0'" />
-    <div class="signature__name">Gabriela <br class="signature__name--hide" />Godek</div>
-  </div>
+  <section class="contact">
+    <h3 class="contact__header">Let's <br> work <br>together</h3>
+    <p class="contact__text">I'm currently available for new work. <br> Let's talk about the next big thing!</p>
+    <div class="contact__icons">
+      <ContactIcons :color="'#F4E7D4'" />
+    </div>
+  </section>
 </template>
 
 

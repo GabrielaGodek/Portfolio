@@ -1,55 +1,117 @@
 @use "../_parts/variables" as *;
 
-.wrapper {
+.experience__header, .education__header {
+  font-size: 30px;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+.experience__text-header {
+  font-size: 20px;
+  line-height: 1.4em;
+  font-weight: 600;
+  padding: 20px 0 10px;
+}
+.experience__text-list {
+  list-style-type: "→";
+  list-style-position: inside;
+  li {
+    margin: 5px 0 10px;
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+}
+.experience {
   display: flex;
   flex-direction: column;
   // margin: auto;
-  padding: 20px;
-  flex:1;
-  &.education {
-    background: linear-gradient(
-      180deg,
-      rgba(250, 250, 250, 1) 13%,
-      rgba(85, 145, 169, 1) 59%,
-      rgba(3, 0, 53, 1) 100%
-    );
-  }
-  .timeline-wrapper {
-    margin: 50px 0;
-    display: flex;
-    gap: 20px;
-    min-height: 250px;
-    flex-direction: column-reverse;
-    @media (min-width: $md_breakpoint) {
-      flex-direction: row;
-    }
-    div {
-      flex: 1 1 50%;
-    }
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.08px;
-    text-align: justify;
+  // padding: 20px;
+  flex: 1;
+}
+.experience__text {
+  .experience__text-paragraph {
+    font-size: 16px;
+    line-height: 1.6em;
   }
 }
+.timeline-wrapper {
+  margin: 50px 0;
+  display: flex;
+  gap: 20px;
+  min-height: 250px;
+  flex-direction: column-reverse;
+  @media (min-width: $md_breakpoint) {
+    flex-direction: row;
+  }
+  div {
+    flex: 1 1 50%;
+  }
+}
+.education {
+  .education__text-paragraph {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+}
+
 @media (min-width: $desktop_breakpoint) {
-  .wrapper {
+  .experience__header,.education__header {
+    flex-basis: 100%;
+    font-size: 48px;
+    line-height: 1.4em;
+    margin: 20px 0 30px;
+  }
+  .experience {
     flex-direction: row-reverse;
-    padding: 50px;
     flex-wrap: wrap;
-    h1 {
-      flex-basis: 100%;
-    }
-    .timeline-wrapper {
-      flex-basis: 50%;
-      justify-content: center;
-    }
-    .text {
+    .experience__text {
       flex-basis: 50%;
       margin: auto;
+      .experience__text-header {
+        font-size: 24px;
+        line-height: 1.6em;
+        padding: 20px 0 5px;
+      }
+      .experience__text-list {
+        li {
+          margin: 2px 0 8px;
+          font-size: 16px;
+          line-height: 1.4em;
+        }
+      }
+    }
+  }
+  .education {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    .education__text {
+      flex-basis: 50%;
+      margin: auto;
+    }
+  }
+  .timeline-wrapper {
+    flex-basis: 50%;
+    justify-content: center;
+    .timeline {
+      max-width: 480px !important;
+      .timeline__date {
+        font-size: 18px;
+      }
+    }
+    .timeline__details {
+      .timeline__title {
+        font-size: 24px;
+      }
+      .timeline__additional {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
+      }
+      .timeline__company {
+        font-size: 18px;
+      }
     }
   }
 }

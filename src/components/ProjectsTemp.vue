@@ -1,5 +1,6 @@
 <script lang="ts">
 import { ref, onBeforeMount, defineComponent } from "vue";
+import { useRouter } from 'vue-router'
 import ProjectItem from "@/components/ProjectItem.vue";
 import { ProjectData } from '@/includes/interfaces'
 
@@ -11,7 +12,8 @@ export default defineComponent({
     setup() {
         const dataAPI = ref<ProjectData[]>([]);
         const errorMessage = ref("");
-
+        const isProjectPage = ref(false)
+        const router = useRouter()
         const getData = async () => {
             try {
                 const response = await fetch(`/db/db.json`);
@@ -29,18 +31,24 @@ export default defineComponent({
             }
         };
 
-        onBeforeMount(getData);
+        onBeforeMount(() => {
+            if (router.currentRoute.value.path === '/projects') {
+                isProjectPage.value = true
+            }
+            getData()
+        });
         return {
             dataAPI,
-            errorMessage
+            errorMessage,
+            isProjectPage
         };
     },
 })
 </script>
 <template>
-    <h1>Skills Development</h1>
-    <h2>Personal and Academic Projects</h2>
-    <div class="scroll_wrapper">
+    <h1 class="projects__header">Skills Development</h1>
+    <h2 class="projects__subheader" v-if="isProjectPage">Personal and academic projects</h2>
+    <div class="projects__list">
         <ProjectItem v-for="item in dataAPI" :key="item.id" :projectDetails="item" />
     </div>
 </template>

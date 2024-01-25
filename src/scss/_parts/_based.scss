@@ -7,53 +7,46 @@ body * {
   box-sizing: border-box;
 }
 body {
-  background-color: $bg_color_second;
+  background-color: $bg_color;
   flex-grow: 1;
 }
 body::-webkit-scrollbar {
   width: 5px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: $details_color;
-  outline: 1px solid $details_color;
+  background-color: $text_color;
+  outline: 1px solid $text_color;
   border-radius: 5px;
 }
 main {
   min-height: $min_page_height;
   display: flex;
   flex-direction: column;
+ 
 }
 strong {
-  font-family: "OpenSans--bold", sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-weight: 600;
 }
 section {
-  padding: 50px 23px 20px;
+  padding: 0 20px;
+  @media (min-width: $desktop_breakpoint){
+    padding: 0 80px;
+  }
 }
 
-h1,
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-}
-h3,
-h4 {
-  font-style: italic;
-}
 body,
+h1,
+h2,
 h3,
 h4 {
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Alexandria", sans-serif;
 }
 
 p,
 div {
-  font-weight: 300;
-  font-size: 18px;
-  color: $text_color_dark;
+  color: $text_color;
   text-align: justify;
 }
-p {
-  padding: 10px 0;
-}
+

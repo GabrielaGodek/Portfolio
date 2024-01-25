@@ -3,13 +3,6 @@ import { ref, defineComponent } from "vue";
 import TimelineItem from "@/components/TimelineItem.vue";
 import { TimeLineItem } from '@/includes/interfaces'
 
-// interface TimeLineItem {
-//   date: string;
-//   header: string;
-//   company: string;
-//   subHeader: string;
-//   isSubHeader: boolean;
-// }
 export default defineComponent({
   name: "EducationItem",
   components: {
@@ -18,7 +11,7 @@ export default defineComponent({
   setup() {
     const timelineItem = ref<TimeLineItem[]>([
       {
-        date: "10.22 - ongoing",
+        date: "10.22 - now",
         header: "Master's Degree",
         company: "Applied Informatics",
         subHeader: "University of Economics at Cracow",
@@ -40,7 +33,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1>Education</h1>
+  <h3 class="education__header">Education</h3>
   <div class="timeline-wrapper">
     <TimelineItem :items="timelineItem" />
   </div>
