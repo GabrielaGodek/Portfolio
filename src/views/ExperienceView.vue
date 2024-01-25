@@ -3,19 +3,16 @@ import { defineComponent } from "vue";
 import Experience from "@/components/ExperienceItem.vue";
 import Education from "@/components/EducationItem.vue";
 
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 export default defineComponent({
   name: "ExperienceView",
   components: {
-    ScrollParallax,
     Education,
     Experience,
   },
 })
 </script>
 <template>
-  <!-- <scroll-parallax :down="true" direction="y" :speed="0.5"> -->
   <section class="experience">
     <Experience />
     <div class="experience__text">
@@ -41,7 +38,6 @@ export default defineComponent({
 
     </div>
   </section>
-  <!-- </scroll-parallax> -->
   <section class="education">
     <Education />
     <div class="education__text">

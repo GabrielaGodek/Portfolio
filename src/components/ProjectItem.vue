@@ -1,13 +1,9 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 import { ProjectData } from '@/includes/interfaces';
 
 export default defineComponent({
   name: 'ProjectItem',
-  components: {
-    ScrollParallax,
-  },
   props: {
     projectDetails: {
       type: Object as PropType<ProjectData>,

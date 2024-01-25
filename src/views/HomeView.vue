@@ -1,13 +1,11 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
-import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue';
 import ContactIcons from "@/components/ContactIcons.vue";
 import ProjectsTemp from "@/components/ProjectsTemp.vue";
 
 export default defineComponent({
   name: "HomeView",
   components: {
-    ScrollParallax,
     ContactIcons,
     ProjectsTemp,
   },
