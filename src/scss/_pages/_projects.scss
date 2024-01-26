@@ -6,9 +6,28 @@
     font-weight: 800;
     text-align: center;
     margin: 20px 0;
-    font-size: 54px;
+    font-size: 48px;
+    animation: slideIn;
+    animation: slideIn;
+    transform: translateY(100%);
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    opacity: 0;
   }
-  
+  .projects__subheader {
+    font-size: 24px;
+    color: $text_color_dark;
+    text-align: center;
+    font-weight: 500;
+    animation: slideIn;
+    transform: translateY(100%);
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+
   .projects__list {
     margin-top: 80px;
     .project {
@@ -72,7 +91,6 @@
       color: $text_color_dark;
       text-align: center;
       font-weight: 500;
-      // margin: 0 0 80px;
     }
     .projects__list {
       display: flex;

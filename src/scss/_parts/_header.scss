@@ -86,14 +86,14 @@ header {
     text-align: center;
     .navigation__item-link {
       display: block;
-      margin: 0px 30px;
+      // margin: 0px 30px;
       height: 100%;
       position: relative;
       top: 0%;
       transition: 0.3s;
     }
-    &:hover .navigation__item-link{
-      top:-100%;
+    &:hover .navigation__item-link {
+      top: -100%;
     }
   }
   .header-wrapper {
@@ -167,6 +167,9 @@ header {
     &.open {
       max-width: $open_menu_width;
       z-index: 999;
+      -webkit-box-shadow: -18px 14px 42px -11px rgba(11, 11, 11, 1);
+      -moz-box-shadow: -18px 14px 42px -11px rgba(11, 11, 11, 1);
+      box-shadow: -18px 14px 42px -11px rgba(11, 11, 11, 1);
       // height: 100vh;
       & + .header-wrapper {
         .header__menu-icon {

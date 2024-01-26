@@ -28,6 +28,7 @@ export default defineComponent({
     };
     const closeMenu = () => {
       isOpen.value = false;
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     };
 
     onClickOutside(target, (event) => {
@@ -82,9 +83,9 @@ export default defineComponent({
     </nav>
     <div class="header-wrapper">
       <div class="header__logo navigation__item" @click="scrollUp">
-        <router-link class="navigation__item-link" :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela
+        <router-link class="navigation__item-link" :to="{ name: 'home' }">Gabriela
           Godek</router-link>
-        <router-link class="navigation__item-link" :to="{ name: 'home' }" @scrollUp="closeMenu">Gabriela
+        <router-link class="navigation__item-link" :to="{ name: 'home' }">Gabriela
           Godek</router-link>
       </div>
       <div class="header__menu-icon">
@@ -93,4 +94,5 @@ export default defineComponent({
         <span></span>
       </div>
     </div>
-</header></template>
+  </header>
+</template>
