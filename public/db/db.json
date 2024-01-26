@@ -9,47 +9,54 @@
   {
     "id": 2,
     "title": "RESTful API",
-    "tech": "NodeJS + Express, TypeScript, MongoDB + Mongoose, Postman",
+    "tech": "Node.js + Express, TypeScript, MongoDB + Mongoose, Postman",
     "links": "https://github.com/GabrielaGodek/RESTful-API",
     "image": "restful_preview.png"
   },
   {
     "id": 3,
+    "title": "Cryptamine",
+    "tech": "Node.js + Express, TypeScript, MySQL, Vite, Vue.js, Sass",
+    "links": "https://github.com/GabrielaGodek/Cryptamine",
+    "image": "cryptamine_preview.png"
+  },
+  {
+    "id": 4,
     "title": "RSA Encryption",
     "tech": "Python",
     "links": "https://github.com/GabrielaGodek/RSA-encryption",
     "image": "rsa_preview.png"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Form Validation",
     "tech": "TypeScript, Tailwind.css",
     "links": "https://github.com/GabrielaGodek/FormValidation",
     "image": "formvalid_preview.png"
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Gabizaury",
     "tech": "Phaser.js, JavaScript, Tiled App",
     "links": "https://github.com/GabrielaGodek/Gabizaury",
     "image": "gabizaury_preview.png"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "EasyMail",
     "tech": "PHP, PHPMailer, Bootstrap",
     "links": "https://github.com/GabrielaGodek/EasyMail",
     "image": "easymail_preview.png"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Snake",
     "tech": "React, Tailwindcss",
     "links": "https://github.com/GabrielaGodek/snake",
     "image": "snake_preview.png"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Portfolio",
     "tech": "Vue.js, TypeScript, Vite, Sass",
     "links": "https://github.com/GabrielaGodek/Portfolio",
