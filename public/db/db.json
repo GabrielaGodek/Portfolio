@@ -9,7 +9,7 @@
   {
     "id": 2,
     "title": "CoffeeSeek",
-    "tech": "Laravel, Vite, JavaScript",
+    "tech": "Laravel, Vite, MySQL, Tailwind.css",
     "links": "https://github.com/GabrielaGodek/caffeseek",
     "image": "coffee1_preview.png"
   },
